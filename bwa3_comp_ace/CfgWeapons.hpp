@@ -137,9 +137,8 @@ class CfgWeapons {
     };
 
     // ATTACHMENTS
-    // Laser not working under every condition
     class BWA3_acc_LLM01_irlaser: ItemCore {
-        BWA3_nextModeClass = "BWA3_acc_LLM01_flash"; //"BWA3_acc_LLM01_laser";
+        BWA3_nextModeClass = "BWA3_acc_LLM01_laser";
     };
 
     class BWA3_acc_LLM01_flash: BWA3_acc_LLM01_irlaser {
@@ -158,7 +157,7 @@ class CfgWeapons {
     };
 
     class BWA3_acc_LLM01_flash_underbarrel: BWA3_acc_LLM01_flash {
-        BWA3_nextModeClass = "BWA3_acc_LLM01_irlaser_underbarrel"; //"BWA3_acc_LLM01_irlaser_underbarrel";
+        BWA3_nextModeClass = "BWA3_acc_LLM01_irlaser_underbarrel";
         model = "\bwa3_attachments\bwa3_llm01_underbarrel.p3d";
     };
 
@@ -169,7 +168,7 @@ class CfgWeapons {
 
 
     class BWA3_acc_VarioRay_irlaser: ItemCore {
-        BWA3_nextModeClass = "BWA3_acc_VarioRay_flash"; //"BWA3_acc_VarioRay_laser";
+        BWA3_nextModeClass = "BWA3_acc_VarioRay_laser";
     };
 
     class BWA3_acc_VarioRay_flash: BWA3_acc_VarioRay_irlaser {
@@ -181,7 +180,6 @@ class CfgWeapons {
         BWA3_nextModeClass = "BWA3_acc_VarioRay_flash";
         scope = 1;
     };
-
 
     // OPTICS
     class InventoryOpticsItem_Base_F;
