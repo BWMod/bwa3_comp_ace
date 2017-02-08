@@ -104,23 +104,57 @@ class CfgWeapons {
         ACE_gunbag_allowGunbag = 1;
     };
 
-    class Launcher_Base_F;
+    class Launcher;
+    class Launcher_Base_F: Launcher {
+        class WeaponSlotsInfo;
+    };
+
     class BWA3_Pzf3: Launcher_Base_F {
         ACE_overpressure_angle = 60;
         ACE_overpressure_range = 10;
         ACE_overpressure_damage = 1;
+
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 320;
+        };
+    };
+
+    class BWA3_Pzf3_Used: BWA3_Pzf3 {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 66;
+        };
     };
 
     class BWA3_RGW90: Launcher_Base_F {
         ACE_overpressure_angle = 60;
         ACE_overpressure_range = 6;
         ACE_overpressure_damage = 0.8;
+
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 198;
+        };
+    };
+
+    class BWA3_RGW90_Used: BWA3_RGW90 {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 58;
+        };
     };
 
     class BWA3_Fliegerfaust: Launcher_Base_F {
         ACE_overpressure_angle = 40;
         ACE_overpressure_range = 5;
         ACE_overpressure_damage = 0.5;
+    };
+
+    class BWA3_CarlGustaf: Launcher_Base_F {
+        ACE_overpressure_angle = 60;
+        ACE_overpressure_range = 6;
+        ACE_overpressure_damage = 1;
+
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+           mass = 187;
+        };
     };
 
     // HELMETS
