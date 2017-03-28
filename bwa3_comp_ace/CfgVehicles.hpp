@@ -31,6 +31,9 @@ class CfgVehicles {
         };
     };
 
+    class Car;
+    class Car_F: Car {};
+    
     class Tank_F: Tank {};
 
     class Helicopter: Air {
@@ -107,6 +110,21 @@ class CfgVehicles {
                 discreteDistance[] = {};
                 discreteDistanceInitIndex = 0;
             };
+        };
+    };
+
+    class BWA3_Eagle_Base: Car_F {
+        
+        fuelCapacity = 700 * FUEL_FACTOR;
+        ACE_refuel_fuelCapacity = 180;
+        
+        class Turrets: Turrets {
+            ACE_fcs_enabled = 1;
+            ACE_fcs_minDistance = 200;
+            ACE_fcs_maxDistance = 9990;
+            ACE_fcs_distanceInterval = 1;
+            discreteDistance[] = {};
+            discreteDistanceInitIndex = 0;
         };
     };
 
