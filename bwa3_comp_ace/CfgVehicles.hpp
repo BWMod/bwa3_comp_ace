@@ -12,6 +12,7 @@ class CfgVehicles {
 
     class Land: AllVehicles {};
     class Air: AllVehicles {};
+    class Car: AllVehicles {};
 
     class LandVehicle: Land {
         class CommanderOptics: NewTurret {};
@@ -31,11 +32,17 @@ class CfgVehicles {
         };
     };
 
-    class Car;
-    class Car_F: Car {};
-    
     class Tank_F: Tank {};
 
+    class Car_F: Car {
+        class Turrets {
+            class MainTurret: NewTurret {
+                class Turrets {
+                };
+            };
+        };
+    };
+    
     class Helicopter: Air {
         class ACE_Actions {
             class ACE_MainActions;
@@ -114,17 +121,22 @@ class CfgVehicles {
     };
 
     class BWA3_Eagle_Base: Car_F {
-        
+
         fuelCapacity = 700 * FUEL_FACTOR;
         ACE_refuel_fuelCapacity = 180;
-        
+
+    };
+    
+    class BWA3_Eagle_flw100_base: BWA3_Eagle_Base {
         class Turrets: Turrets {
-            ACE_fcs_enabled = 1;
-            ACE_fcs_minDistance = 200;
-            ACE_fcs_maxDistance = 9990;
-            ACE_fcs_distanceInterval = 1;
-            discreteDistance[] = {};
-            discreteDistanceInitIndex = 0;
+            class MainTurret: MainTurret {
+                ACE_fcs_enabled = 1;
+                ACE_fcs_minDistance = 50;
+                ACE_fcs_maxDistance = 5000;
+                ACE_fcs_distanceInterval = 5;
+                discreteDistance[] = {};
+                discreteDistanceInitIndex = 0;
+            };
         };
     };
 
