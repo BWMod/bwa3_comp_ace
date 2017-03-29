@@ -30,7 +30,7 @@ class CfgVehicles {
             };
         };
     };
-    
+
     class Car: LandVehicle {};
 
     class Car_F: Car {
@@ -38,9 +38,9 @@ class CfgVehicles {
             class MainTurret;
         };
     };
-    
+
     class Tank_F: Tank {};
-    
+
     class Helicopter: Air {
         class ACE_Actions {
             class ACE_MainActions;
