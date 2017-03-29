@@ -12,7 +12,6 @@ class CfgVehicles {
 
     class Land: AllVehicles {};
     class Air: AllVehicles {};
-    class Car: AllVehicles {};
 
     class LandVehicle: Land {
         class CommanderOptics: NewTurret {};
@@ -31,17 +30,16 @@ class CfgVehicles {
             };
         };
     };
-
-    class Tank_F: Tank {};
+    
+    class Car: LandVehicle {};
 
     class Car_F: Car {
         class Turrets {
-            class MainTurret: NewTurret {
-                class Turrets {
-                };
-            };
+            class MainTurret;
         };
     };
+    
+    class Tank_F: Tank {};
     
     class Helicopter: Air {
         class ACE_Actions {
@@ -121,10 +119,8 @@ class CfgVehicles {
     };
 
     class BWA3_Eagle_Base: Car_F {
-
         fuelCapacity = 700 * FUEL_FACTOR;
         ACE_refuel_fuelCapacity = 180;
-
     };
     
     class BWA3_Eagle_flw100_base: BWA3_Eagle_Base {
