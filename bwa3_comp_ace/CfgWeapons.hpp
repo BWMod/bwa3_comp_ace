@@ -251,6 +251,7 @@ class CfgWeapons {
     };
 
     class BWA3_optic_20x50: ItemCore {
+        ACE_ScopeHeightAboveRail = 4.0;
         ACE_scopeadjust_vertical[] = {0, 26};
         ACE_scopeadjust_verticalIncrement = 0.1;
         ACE_scopeadjust_horizontal[] = {-6, 6};
