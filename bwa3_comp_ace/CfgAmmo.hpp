@@ -1,7 +1,7 @@
 
 class CfgAmmo {
     class B_556x45_Ball_Tracer_Red;
-    class BWA3_B_556x45_Ball: B_556x45_Ball_Tracer_Red {
+    class BWA3_B_556x45_Ball: B_556x45_Ball_Tracer_Red { // B_556x45_Ball, AtragMx GunList: "5.56x45mm M855"
         ACE_caliber = 5.69;
         ACE_bulletLength = 23.012;
         ACE_bulletMass = 4.0176;
@@ -20,7 +20,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {};
         ACE_barrelLengths[] = {};
     };
-    class BWA3_B_556x45_Ball_AP: BWA3_B_556x45_Ball {
+    class BWA3_B_556x45_Ball_AP: BWA3_B_556x45_Ball { // ACE_556x45_Ball_M995_AP, AtragMx GunList: "5.56x45mm M995"
         ACE_caliber = 5.69;
         ACE_bulletLength = 23.012;
         ACE_bulletMass = 4.5359237;
@@ -34,7 +34,7 @@ class CfgAmmo {
     };
 
     class B_762x51_Tracer_Red;
-    class BWA3_B_762x51_Ball: B_762x51_Tracer_Red {
+    class BWA3_B_762x51_Ball: B_762x51_Tracer_Red { // class B_762x51_Ball, AtragMx GunList: "7.62x51mm M80"
         ACE_caliber = 7.823;
         ACE_bulletLength = 28.956;
         ACE_bulletMass = 9.4608;
@@ -46,7 +46,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {700, 800, 820, 833, 845};
         ACE_barrelLengths[] = {254.0, 406.4, 508.0, 609.6, 660.4};
     };
-    class BWA3_B_762x51_Ball_SD: BWA3_B_762x51_Ball {
+    class BWA3_B_762x51_Ball_SD: BWA3_B_762x51_Ball { // ACE_762x51_Ball_Subsonic, AtragMx GunList: "7.62x51mm Subsonic"
         ACE_caliber = 7.823;
         ACE_bulletLength = 34.036;
         ACE_bulletMass = 12.96;
@@ -58,7 +58,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {305, 325, 335, 340};
         ACE_barrelLengths[] = {406.4, 508.0, 609.6, 660.4};
     };
-    class BWA3_B_762x51_Ball_AP: BWA3_B_762x51_Ball {
+    class BWA3_B_762x51_Ball_AP: BWA3_B_762x51_Ball { // ACE_762x51_Ball_M993_AP, AtragMx GunList: "7.62x51mm M993"
         ACE_caliber = 7.823;
         ACE_bulletLength = 31.496;
         ACE_bulletMass = 8.22946157;
@@ -70,7 +70,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {875, 910, 930};
         ACE_barrelLengths[] = {330.2, 406.4, 508.0};
     };
-    class BWA3_B_762x51_Ball_LR: BWA3_B_762x51_Ball {
+    class BWA3_B_762x51_Ball_LR: BWA3_B_762x51_Ball { // ACE_762x51_Ball_M118LR, AtragMx GunList: "7.62x51mm M118LR"
         ACE_caliber = 7.823;
         ACE_bulletLength = 31.496;
         ACE_bulletMass = 11.34;
@@ -84,7 +84,7 @@ class CfgAmmo {
     };
 
     class B_127x99_Ball_Tracer_Red;
-    class BWA3_B_127x99_Ball: B_127x99_Ball_Tracer_Red {
+    class BWA3_B_127x99_Ball: B_127x99_Ball_Tracer_Red { // B_127x99_Ball, AtragMx GunList: "12.7x99mm"
         ACE_caliber = 12.954;
         ACE_bulletLength = 58.674;
         ACE_bulletMass = 41.9256;
@@ -103,7 +103,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {};
         ACE_barrelLengths[] = {};
     };
-    class BWA3_B_127x99_Ball_AP: BWA3_B_127x99_Ball {
+    class BWA3_B_127x99_Ball_AP: BWA3_B_127x99_Ball { // ACE_127x99_API, AtragMx GunList: "12.7x99mm"
         ACE_caliber = 12.954;
         ACE_bulletLength = 58.674;
         ACE_bulletMass = 41.9904;
