@@ -115,6 +115,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {900};
         ACE_barrelLengths[] = {736.6};
     };
+    class BWA3_B_127x99_Ball_Raufoss: BWA3_B_127x99_Ball {}; // B_127x99_Ball, AtragMx GunList: "12.7x99mm" 
 
     class BulletBase;
     class BWA3_B_46x30_Ball: BulletBase {
