@@ -13,12 +13,17 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {723, 764, 796, 825, 843, 866, 878, 892, 906, 915, 922, 900};
         ACE_barrelLengths[] = {210.82, 238.76, 269.24, 299.72, 330.2, 360.68, 391.16, 419.1, 449.58, 480.06, 508.0, 609.6};
     };
-    class BWA3_B_556x45_Ball_SD: BWA3_B_556x45_Ball {
-        // Reference?
-        ACE_ballisticCoefficients[] = {};
+    class BWA3_B_556x45_Ball_SD: BWA3_B_556x45_Ball { // CfgAmmoReference.hpp: class VTN_556x45_Ball_SS
+        ACE_caliber = 5.69;
+        ACE_bulletLength = 23.012;
+        ACE_bulletMass = 4.0176;
+        ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
+        ACE_ballisticCoefficients[] = {0.151};
         ACE_velocityBoundaries[] = {};
-        ACE_muzzleVelocities[] = {};
-        ACE_barrelLengths[] = {};
+        ACE_standardAtmosphere = "ASM";
+        ACE_dragModel = 7;
+        ACE_muzzleVelocities[] = {300, 320, 340};
+        ACE_barrelLengths[] = {254.0, 508.0, 609.6};
     };
     class BWA3_B_556x45_Ball_AP: BWA3_B_556x45_Ball { // ACE_556x45_Ball_M995_AP, AtragMx GunList: "5.56x45mm M995"
         ACE_caliber = 5.69;
@@ -97,11 +102,16 @@ class CfgAmmo {
         ACE_barrelLengths[] = {736.6};
     };
     class BWA3_B_127x99_Ball_SD: BWA3_B_127x99_Ball {
-        // Reference?
-        ACE_ballisticCoefficients[] = {};
+        ACE_caliber = 12.954;
+        ACE_bulletLength = 58.674;
+        ACE_bulletMass = 41.9256;
+        ACE_ammoTempMuzzleVelocityShifts[] = {-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
+        ACE_ballisticCoefficients[] = {0.670};
         ACE_velocityBoundaries[] = {};
-        ACE_muzzleVelocities[] = {};
-        ACE_barrelLengths[] = {};
+        ACE_standardAtmosphere = "ASM";
+        ACE_dragModel = 1;
+        ACE_muzzleVelocities[] = {330};
+        ACE_barrelLengths[] = {736.6};
     };
     class BWA3_B_127x99_Ball_AP: BWA3_B_127x99_Ball { // ACE_127x99_API, AtragMx GunList: "12.7x99mm"
         ACE_caliber = 12.954;
