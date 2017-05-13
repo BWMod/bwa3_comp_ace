@@ -13,7 +13,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {723, 764, 796, 825, 843, 866, 878, 892, 906, 915, 922, 900};
         ACE_barrelLengths[] = {210.82, 238.76, 269.24, 299.72, 330.2, 360.68, 391.16, 419.1, 449.58, 480.06, 508.0, 609.6};
     };
-    class BWA3_B_556x45_Ball_SD: BWA3_B_556x45_Ball { // CfgAmmoReference.hpp: class VTN_556x45_Ball_SS
+    class BWA3_B_556x45_Ball_SD: BWA3_B_556x45_Ball { // CfgAmmoReference.hpp: VTN_556x45_Ball_SS
         ACE_caliber = 5.69;
         ACE_bulletLength = 23.012;
         ACE_bulletMass = 4.0176;
