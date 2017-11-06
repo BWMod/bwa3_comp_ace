@@ -34,9 +34,10 @@ class CfgWeapons {
     class UGL_F;
 
     class BWA3_G36: Rifle_Base_F {
-        ACE_overheating_dispersion[] = {0, 0.001, 0.003, 0.005};
-        ACE_overheating_slowdownFactor[] = {1, 1, 1, 0.9};
-        ACE_overheating_jamChance[] = {0, 0.0003, 0.0015, 0.0075};
+        ACE_overheating_mrbs = 3000; //Mean Rounds Between Stoppages (this will be scaled based on the barrel temp)
+        ACE_overheating_slowdownFactor = 1; //Slowdown Factor (this will be scaled based on the barrel temp)
+        ACE_overheating_allowSwapBarrel = 0; // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
+        ACE_overheating_dispersion = 1; //Dispersion Factor (this will be scaled based on the barrel temp)
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 480;
 
@@ -49,14 +50,12 @@ class CfgWeapons {
         ACE_barrelLength = 318;
     };
     class BWA3_G36_LMG: BWA3_G36 {
-        ACE_overheating_dispersion[] = {0, 0.001, 0.002, 0.004};
+        ACE_overheating_dispersion = 1;
     };
 
     class Rifle_Long_Base_F;
     class BWA3_G28_Standard: Rifle_Long_Base_F {
-        ACE_overheating_dispersion[] = {0, 0.001, 0.002, 0.004};
-        ACE_overheating_slowdownFactor[] = {1, 1, 1, 0.9};
-        ACE_overheating_jamChance[] = {0, 0.0003, 0.0015, 0.0075};
+        ACE_overheating_dispersion = 0.75;
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 421;
         ACE_gunbag_allowGunbag = 1;
@@ -78,27 +77,28 @@ class CfgWeapons {
     };
 
     class BWA3_MG4: Rifle_Long_Base_F {
+        ACE_overheating_mrbs = 3000;
+        ACE_overheating_slowdownFactor = 1;
         ACE_overheating_allowSwapBarrel = 1;
-        ACE_overheating_dispersion[] = {0, 0.001, 0.002, 0.004};
-        ACE_overheating_slowdownFactor[] = {1, 1, 1, 0.9};
-        ACE_overheating_jamChance[] = {0, 0.0003, 0.0015, 0.0075};
+        ACE_overheating_dispersion = 0.75;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 480;
     };
 
     class BWA3_MG5: Rifle_Long_Base_F {
+        ACE_overheating_mrbs = 3000;
+        ACE_overheating_slowdownFactor = 1;
         ACE_overheating_allowSwapBarrel = 1;
-        ACE_overheating_dispersion[] = {0, -0.001, 0.001, 0.003};
-        ACE_overheating_slowdownFactor[] = {1, 1, 1, 0.9};
-        ACE_overheating_jamChance[] = {0, 0.0003, 0.0015, 0.0075};
+        ACE_overheating_dispersion = 0.75;
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 550;
     };
 
     class BWA3_G82: Rifle_Long_Base_F {
-        ACE_overheating_dispersion[] = {0, -0.001, 0.001, 0.003};
-        ACE_overheating_slowdownFactor[] = {1, 1, 1, 0.9};
-        ACE_overheating_jamChance[] = {0, 0.0003, 0.0015, 0.0075};
+        ACE_overheating_mrbs = 3000;
+        ACE_overheating_slowdownFactor = 1;
+        ACE_overheating_allowSwapBarrel = 1;
+        ACE_overheating_dispersion = 0.75;
         ACE_barrelTwist = 381.0;
         ACE_barrelLength = 736.7;
         ACE_gunbag_allowGunbag = 1;
