@@ -172,12 +172,14 @@ class CfgWeapons {
         ACE_overpressure_angle = 40;
         ACE_overpressure_range = 5;
         ACE_overpressure_damage = 0.5;
+	ACE_reloadlaunchers_enabled = 1;
     };
 
     class BWA3_CarlGustaf: Launcher_Base_F {
         ACE_overpressure_angle = 60;
         ACE_overpressure_range = 6;
         ACE_overpressure_damage = 1;
+	ACE_reloadlaunchers_enabled = 1;
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
            mass = 187;
