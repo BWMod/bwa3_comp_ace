@@ -111,8 +111,8 @@ class CfgWeapons {
 
     class BWA3_Pzf3: Launcher_Base_F {
         ACE_overpressure_angle = 60;
-        ACE_overpressure_range = 10;
-        ACE_overpressure_damage = 1;
+        ACE_overpressure_range = 3.5;
+        ACE_overpressure_damage = 0.8;
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 320;
@@ -126,9 +126,9 @@ class CfgWeapons {
     };
 
     class BWA3_RGW90: Launcher_Base_F {
-        ACE_overpressure_angle = 60;
-        ACE_overpressure_range = 6;
-        ACE_overpressure_damage = 0.8;
+        ACE_overpressure_angle = 50;
+        ACE_overpressure_range = 1.5;
+        ACE_overpressure_damage = 0.3;
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 198;
@@ -142,14 +142,14 @@ class CfgWeapons {
     };
 
     class BWA3_Fliegerfaust: Launcher_Base_F {
-        ACE_overpressure_angle = 40;
-        ACE_overpressure_range = 5;
+        ACE_overpressure_angle = 80;
+        ACE_overpressure_range = 3.5;
         ACE_overpressure_damage = 0.5;
     };
 
     class BWA3_CarlGustaf: Launcher_Base_F {
         ACE_overpressure_angle = 60;
-        ACE_overpressure_range = 6;
+        ACE_overpressure_range = 8;
         ACE_overpressure_damage = 1;
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
