@@ -93,6 +93,16 @@ class CfgWeapons {
         };
     };
 
+    class BWA3_MG3: Rifle_Long_Base_F {
+        ace_overheating_mrbs = 2000;
+        ace_overheating_slowdownFactor = 0.75;
+        ACE_overheating_allowSwapBarrel = 1;
+        ACE_overheating_dispersion = 0.85;
+        ACE_barrelTwist = 305;
+        ACE_barrelLength = 565;
+        ACE_RailHeightAboveBore = 3.6; //Nothing found so MG5 value
+    };
+
     class BWA3_MG4: Rifle_Long_Base_F {
         ACE_overheating_allowSwapBarrel = 1;
         ACE_overheating_dispersion = 0.85;
