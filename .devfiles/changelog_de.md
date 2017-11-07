@@ -4,4 +4,4 @@
 - hinzugefügt: ACE buddy reload
 - hinzugefügt: Fast alle Aktionen zu ace_actions konvertiert
 - geändert: Rückstrahlzonen für Werfer
-- geändert: ACE overheating - aufs neue System umgeschrieben
+- geändert: ACE overheating - auf das neue System konvertiert
