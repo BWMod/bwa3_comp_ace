@@ -143,6 +143,12 @@ class CfgVehicles {
 
     class BWA3_Leopard_base: Tank_F {
         class UserActions {
+            delete Mudflaps_hide;
+            delete Mudflaps_show;
+            delete CamoTurret_hide;
+            delete CamoTurret_show;
+            delete CamoChassis_hide;
+            delete CamoChassis_show;
             delete CamoNet_gun_hide;
             delete CamoNet_gun_show;
             delete CamoNet_turret_hide;
@@ -164,35 +170,80 @@ class CfgVehicles {
                 priority = 2;
                 distance = 4;
                 icon = "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
-                condition = "_target animationPhase ""hide_netz"" > 0.5 and _player == cameraOn";
-                statement = "[8, _target, {_this select 0 animate [""hide_netz"", 0];}, {}, localize ""STR_BWA3_CamouflageNet_show""] call ace_common_fnc_progressBar"
+                condition = "_target animationSourcePhase ""camoProxyChassis"" < 0.5 and _player == cameraOn";
+                statement = "[8, _target, {_this select 0 animateSource [""camoProxyChassis"", 1];}, {}, localize ""STR_BWA3_CamouflageNet_show""] call ace_common_fnc_progressBar"
             };
             class BWA3_CamoNet_hide: BWA3_CamoNet_show {
                 displayName = "$STR_BWA3_CamouflageNet_hide";
-                condition = "_target animationPhase ""hide_netz"" < 0.5 and _player == cameraOn";
-                statement = "[8, _target, {_this select 0 animate [""hide_netz"", 1];}, {}, localize ""STR_BWA3_CamouflageNet_hide""] call ace_common_fnc_progressBar"
+                condition = "_target animationSourcePhase ""camoProxyChassis"" == 1 and _player == cameraOn";
+                statement = "[8, _target, {_this select 0 animateSource [""camoProxyChassis"", 0];}, {}, localize ""STR_BWA3_CamouflageNet_hide""] call ace_common_fnc_progressBar"
             };
             class BWA3_CamoNet_turret_show: BWA3_CamoNet_show {
                 displayName = "$STR_BWA3_CamouflageNet_Turret_show";
                 selection = "gunnerview";
-                condition = "_target animationPhase ""hide_netz_turret"" > 0.5 and _player == cameraOn";
-                statement = "[8, _target, {_this select 0 animate [""hide_netz_turret"", 0];}, {}, localize ""STR_BWA3_CamouflageNet_Turret_show""] call ace_common_fnc_progressBar"
+                condition = "_target animationSourcePhase ""camoProxyTurret"" < 0.5 and _player == cameraOn";
+                statement = "[8, _target, {_this select 0 animateSource [""camoProxyTurret"", 1];}, {}, localize ""STR_BWA3_CamouflageNet_Turret_show""] call ace_common_fnc_progressBar"
             };
             class BWA3_CamoNet_turret_hide: BWA3_CamoNet_turret_show {
                 displayName = "$STR_BWA3_CamouflageNet_Turret_hide";
-                condition = "_target animationPhase ""hide_netz_turret"" < 0.5 and _player == cameraOn";
-                statement = "[8, _target, {_this select 0 animate [""hide_netz_turret"", 1];}, {}, localize ""STR_BWA3_CamouflageNet_Turret_hide""] call ace_common_fnc_progressBar"
+                condition = "_target animationSourcePhase ""camoProxyTurret"" == 1 and _player == cameraOn";
+                statement = "[8, _target, {_this select 0 animateSource [""camoProxyTurret"", 0];}, {}, localize ""STR_BWA3_CamouflageNet_Turret_hide""] call ace_common_fnc_progressBar"
             };
             class BWA3_CamoNet_gun_show: BWA3_CamoNet_show {
                 displayName = "$STR_BWA3_CamouflageNet_Gun_show";
                 selection = "usti hlavne2";
-                condition = "_target animationPhase ""hide_netz_gun"" > 0.5 and _player == cameraOn";
-                statement = "[8, _target, {_this select 0 animate [""hide_netz_gun"", 0];}, {}, localize ""STR_BWA3_CamouflageNet_Gun_show""] call ace_common_fnc_progressBar"
+                condition = "_target animationSourcePhase ""camoProxyGun"" < 0.5 and _player == cameraOn";
+                statement = "[8, _target, {_this select 0 animateSource [""camoProxyGun"", 1];}, {}, localize ""STR_BWA3_CamouflageNet_Gun_show""] call ace_common_fnc_progressBar"
             };
             class BWA3_CamoNet_gun_hide: BWA3_CamoNet_gun_show {
                 displayName = "$STR_BWA3_CamouflageNet_Gun_hide";
-                condition = "_target animationPhase ""hide_netz_gun"" < 0.5 and _player == cameraOn";
-                statement = "[8, _target, {_this select 0 animate [""hide_netz_gun"", 1];}, {}, localize ""STR_BWA3_CamouflageNet_Gun_hide""] call ace_common_fnc_progressBar"
+                condition = "_target animationSourcePhase ""camoProxyGun"" > 0.5 and _player == cameraOn";
+                statement = "[8, _target, {_this select 0 animateSource [""camoProxyGun"", 0];}, {}, localize ""STR_BWA3_CamouflageNet_Gun_hide""] call ace_common_fnc_progressBar"
+            };
+            class BWA3_CamoChassis_show {
+                displayName = "$STR_BWA3_Leopard2A6MCamo_Chassis_Show";
+                selection = "mirror_right_axis";
+                position = "";
+                showDisabled = 0;
+                priority = 2;
+                distance = 4;
+                icon = "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
+                condition = "[_target,""camoProxyChassis""] call BWA3_fnc_canUseCamo > 1 and _player == cameraOn";
+                statement = "[10, _target, {_this select 0 animateSource [""camoProxyChassis"", [this,""camoProxyChassis""] call BWA3_fnc_canUseCamo];}, {}, localize ""STR_BWA3_Leopard2A6MCamo_Chassis_Show""] call ace_common_fnc_progressBar"
+            };
+            class BWA3_CamoChassis_hide: BWA3_CamoChassis_show {
+                displayName = "$STR_BWA3_Leopard2A6MCamo_Chassis_Hide";
+                condition = "_target animationSourcePhase ""camoProxyChassis"" > 1 and _player == cameraOn";
+                statement = "[10, _target, {_this select 0 animateSource [""camoProxyChassis"", 1];}, {}, localize ""STR_BWA3_Leopard2A6MCamo_Chassis_Hide""] call ace_common_fnc_progressBar"
+            };
+            class BWA3_CamoTurret_show: BWA3_CamoChassis_show {
+                displayName = "$STR_BWA3_Leopard2A6MCamo_Turret_Show";
+                selection = "konec hlavne2";
+                condition = "[_target,""camoProxyTurret""] call BWA3_fnc_canUseCamo > 1 and _player == cameraOn";
+                statement = "[10, _target, {_this select 0 animateSource [""camoProxyTurret"", [this,""camoProxyTurret""] call BWA3_fnc_canUseCamo];}, {}, localize ""STR_BWA3_Leopard2A6MCamo_Turret_Show""] call ace_common_fnc_progressBar"
+            };
+            class BWA3_CamoTurret_hide: BWA3_CamoTurret_show  {
+                displayName = "$STR_BWA3_Leopard2A6MCamo_Turret_Hide";
+                condition = "_target animationSourcePhase ""camoProxyTurret"" > 1 and _player == cameraOn";
+                statement = "[10, _target, {_this select 0 animateSource [""camoProxyTurret"", 1];}, {}, localize ""STR_BWA3_Leopard2A6MCamo_Turret_Hide""] call ace_common_fnc_progressBar"
+            };
+
+            class BWA3_Mudflaps_show {
+                displayName = "$STR_BWA3_Leopard2A6MMudflapShow";
+                selection = "exhaust_pos";
+                position = "";
+                showDisabled = 0;
+                priority = 2;
+                distance = 4;
+                icon = "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
+                condition = "_target animationSourcePhase ""Mudflaps"" < 0.5 and _player == cameraOn";
+                statement = "[6, _target, {_this select 0 animateSource [""Mudflaps"", 1];}, {}, localize ""STR_BWA3_Leopard2A6MMudflapShow""] call ace_common_fnc_progressBar"
+
+            };
+            class BWA3_Mudflaps_hide: BWA3_Mudflaps_show {
+                displayName = "$STR_BWA3_Leopard2A6MMudflapHide";
+                condition = "_target animationSourcePhase ""Mudflaps"" > 0.5 and _player == cameraOn";
+                statement = "[6, _target, {_this select 0 animateSource [""Mudflaps"", 0];}, {}, localize ""STR_BWA3_Leopard2A6MMudflapHide""] call ace_common_fnc_progressBar"
             };
         };
 
