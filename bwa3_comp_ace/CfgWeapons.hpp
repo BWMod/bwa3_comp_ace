@@ -35,10 +35,6 @@ class CfgWeapons {
     class UGL_F;
 
     class BWA3_G36: Rifle_Base_F {
-        ACE_overheating_mrbs = 3000; //Mean Rounds Between Stoppages (this will be scaled based on the barrel temp)
-        ACE_overheating_slowdownFactor = 1; //Slowdown Factor (this will be scaled based on the barrel temp)
-        ACE_overheating_allowSwapBarrel = 0; // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
-        ACE_overheating_dispersion = 1; //Dispersion Factor (this will be scaled based on the barrel temp)
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 480;
         ACE_RailHeightAboveBore = 6.2;
@@ -54,15 +50,12 @@ class CfgWeapons {
     class BWA3_G36_LMG: BWA3_G36 {
         ACE_overheating_dispersion = 1;
     };
-    
+
     class BWA3_G38: Rifle_Base_F {
-        ACE_overheating_dispersion[] = {0, 0.001, 0.003, 0.005};
-        ACE_overheating_slowdownFactor[] = {1, 1, 1, 0.9};
-        ACE_overheating_jamChance[] = {0, 0.0003, 0.0015, 0.0075};
         ACE_barrelTwist = 177.8; // 1:7"
         ACE_barrelLength = 419.1; // 16.5"
         ACE_RailHeightAboveBore = 3.1;
-        
+
         class AG40: UGL_F {
             magazines[] = {"1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell","ACE_HuntIR_M203"};
         };
@@ -101,30 +94,22 @@ class CfgWeapons {
     };
 
     class BWA3_MG4: Rifle_Long_Base_F {
-        ACE_overheating_mrbs = 3000;
-        ACE_overheating_slowdownFactor = 1;
         ACE_overheating_allowSwapBarrel = 1;
-        ACE_overheating_dispersion = 0.75;
+        ACE_overheating_dispersion = 0.85;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 480;
         ACE_RailHeightAboveBore = 4.0;
     };
 
     class BWA3_MG5: Rifle_Long_Base_F {
-        ACE_overheating_mrbs = 3000;
-        ACE_overheating_slowdownFactor = 1;
         ACE_overheating_allowSwapBarrel = 1;
-        ACE_overheating_dispersion = 0.75;
+        ACE_overheating_dispersion = 0.85;
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 550;
         ACE_RailHeightAboveBore = 3.6;
     };
 
     class BWA3_G82: Rifle_Long_Base_F {
-        ACE_overheating_mrbs = 3000;
-        ACE_overheating_slowdownFactor = 1;
-        ACE_overheating_allowSwapBarrel = 1;
-        ACE_overheating_dispersion = 0.75;
         ACE_barrelTwist = 381.0;
         ACE_barrelLength = 736.7;
         ACE_gunbag_allowGunbag = 1;
@@ -246,24 +231,24 @@ class CfgWeapons {
 
     // OPTICS
     class InventoryOpticsItem_Base_F;
-    
+
     class BWA3_optic_Kolimator_base: ItemCore {};
     class BWA3_optic_RSAS: BWA3_optic_Kolimator_base {
         ACE_ScopeHeightAboveRail = 2.6;
     };
-    
+
     class BWA3_optic_Flipsights: BWA3_optic_Kolimator_base {
         ACE_ScopeHeightAboveRail = 1.5;
     };
-    
+
     class BWA3_optic_G36C_Ironsight_100: BWA3_optic_Kolimator_base {
         ACE_ScopeHeightAboveRail = 1.5;
     };
-    
+
     class BWA3_optic_Aimpoint: BWA3_optic_Kolimator_base {
         ACE_ScopeHeightAboveRail = 2.6;
     };
-    
+
     class BWA3_optic_EOTech: BWA3_optic_Kolimator_base {
         ACE_ScopeHeightAboveRail = 4.1;
     };
