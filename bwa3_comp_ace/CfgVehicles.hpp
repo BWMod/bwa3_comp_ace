@@ -238,7 +238,6 @@ class CfgVehicles {
                 icon = "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
                 condition = "_target animationSourcePhase ""Mudflaps"" < 0.5 and _player == cameraOn";
                 statement = "[6, _target, {_this select 0 animateSource [""Mudflaps"", 1];}, {}, localize ""STR_BWA3_Leopard2A6MMudflapShow""] call ace_common_fnc_progressBar"
-
             };
             class BWA3_Mudflaps_hide: BWA3_Mudflaps_show {
                 displayName = "$STR_BWA3_Leopard2A6MMudflapHide";
