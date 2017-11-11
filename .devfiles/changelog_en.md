@@ -1,3 +1,7 @@
+#1.6-1
+- added: MG3 support
+- changed: SD bullets parsing now ace_advanced_ballistics
+
 #v1.5-2
 
 - added: ACE Scopes Framework
