@@ -139,8 +139,8 @@ class CfgWeapons {
 
     class BWA3_RGW90: Launcher_Base_F {
         ACE_overpressure_angle = 50;
-        ACE_overpressure_range = 1.5;
-        ACE_overpressure_damage = 0.3;
+        ACE_overpressure_range = 2.5;
+        ACE_overpressure_damage = 0.5;
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 198;
