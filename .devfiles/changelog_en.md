@@ -1,5 +1,6 @@
 #1.6-1
 - added: MG3 support
+- added: LLM01/VarioRay map flashlight function
 - changed: SD bullets parsing now ace_advanced_ballistics
 
 #v1.5-2
