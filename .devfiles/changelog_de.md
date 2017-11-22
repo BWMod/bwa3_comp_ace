@@ -1,6 +1,7 @@
 ﻿#v1.6-1
 - hinzugefügt: MG3 Support
 - geändert: SD nun ace_advanced_ballistics konform
+- geändert: Tastenbelegung Waffenzubehör auf CBA_Accessory umgeschrieben
 
 #v1.5-2
 

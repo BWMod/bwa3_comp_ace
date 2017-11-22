@@ -196,44 +196,64 @@ class CfgWeapons {
 
     // ATTACHMENTS
     class BWA3_acc_LLM01_irlaser: ItemCore {
+        MRT_SwitchItemNextClass = "BWA3_acc_LLM01_flash";
+        MRT_SwitchItemPrevClass = "BWA3_acc_LLM01_laser";
         BWA3_nextModeClass = "BWA3_acc_LLM01_laser";
     };
 
     class BWA3_acc_LLM01_flash: BWA3_acc_LLM01_irlaser {
+        MRT_SwitchItemNextClass = "BWA3_acc_LLM01_laser";
+        MRT_SwitchItemPrevClass = "BWA3_acc_LLM01_irlaser";
         BWA3_nextModeClass = "BWA3_acc_LLM01_irlaser";
     };
 
     class BWA3_acc_LLM01_laser: BWA3_acc_LLM01_irlaser {
         ACE_laserpointer = 1;
+        MRT_SwitchItemNextClass = "BWA3_acc_LLM01_irlaser";
+        MRT_SwitchItemPrevClass = "BWA3_acc_LLM01_flash";
+        MRT_switchItemHintText = "$STR_BWA3_Laser";
         BWA3_nextModeClass = "BWA3_acc_LLM01_flash";
         scope = 1;
     };
 
     class BWA3_acc_LLM01_irlaser_underbarrel: BWA3_acc_LLM01_irlaser {
+        MRT_SwitchItemNextClass = "BWA3_acc_LLM01_flash_underbarrel";
+        MRT_SwitchItemPrevClass = "BWA3_acc_LLM01_laser_underbarrel";
         BWA3_nextModeClass = "BWA3_acc_LLM01_flash_underbarrel";
         model = "\bwa3_attachments\bwa3_llm01_underbarrel.p3d";
     };
 
     class BWA3_acc_LLM01_flash_underbarrel: BWA3_acc_LLM01_flash {
+        MRT_SwitchItemNextClass = "BWA3_acc_LLM01_laser_underbarrel";
+        MRT_SwitchItemPrevClass = "BWA3_acc_LLM01_irlaser_underbarrel";
         BWA3_nextModeClass = "BWA3_acc_LLM01_irlaser_underbarrel";
         model = "\bwa3_attachments\bwa3_llm01_underbarrel.p3d";
     };
 
     class BWA3_acc_LLM01_laser_underbarrel: BWA3_acc_LLM01_laser {
+        MRT_SwitchItemNextClass = "BWA3_acc_LLM01_irlaser_underbarrel";
+        MRT_SwitchItemPrevClass = "BWA3_acc_LLM01_flash_underbarrel";
         BWA3_nextModeClass = "BWA3_acc_LLM01_irlaser_underbarrel";
         model = "\bwa3_attachments\bwa3_llm01_underbarrel.p3d";
     };
 
 
     class BWA3_acc_VarioRay_irlaser: ItemCore {
+        MRT_SwitchItemNextClass = "BWA3_acc_VarioRay_flash";
+        MRT_SwitchItemPrevClass = "BWA3_acc_VarioRay_laser";
         BWA3_nextModeClass = "BWA3_acc_VarioRay_laser";
     };
 
     class BWA3_acc_VarioRay_flash: BWA3_acc_VarioRay_irlaser {
+        MRT_SwitchItemNextClass = "BWA3_acc_VarioRay_laser";
+        MRT_SwitchItemPrevClass = "BWA3_acc_VarioRay_irlaser";
         BWA3_nextModeClass = "BWA3_acc_VarioRay_irlaser";
     };
 
     class BWA3_acc_VarioRay_laser: BWA3_acc_VarioRay_irlaser {
+        MRT_SwitchItemNextClass = "BWA3_acc_VarioRay_irlaser";
+        MRT_SwitchItemPrevClass = "BWA3_acc_VarioRay_flash";
+        MRT_switchItemHintText = "$STR_BWA3_Laser";
         ACE_laserpointer = 1;
         BWA3_nextModeClass = "BWA3_acc_VarioRay_flash";
         scope = 1;
