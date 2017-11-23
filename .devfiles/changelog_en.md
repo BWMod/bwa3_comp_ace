@@ -1,6 +1,7 @@
 #1.6-1
 - added: MG3 support
 - changed: SD bullets parsing now ace_advanced_ballistics
+- changed: ZO4x30 removed ACE_scopeadjust
 
 #v1.5-2
 
