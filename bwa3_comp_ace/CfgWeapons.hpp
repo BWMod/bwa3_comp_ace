@@ -1,5 +1,6 @@
 
-#define GLM_MASS 28.575
+#define MASSMULTI 22
+#define GLM_MASS (1.27*MASSMULTI)
 
 class PointerSlot;
 
@@ -24,7 +25,7 @@ class CfgWeapons {
             class PointerSlot: PointerSlot {
                 compatibleItems[] = {"BWA3_acc_LLM01_irlaser","BWA3_acc_LLM01_flash","BWA3_acc_LLM01_laser"};
             };
-            mass = 17.5;
+            mass = (0.77*MASSMULTI);
         };
     };
 
@@ -34,13 +35,13 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 4.0;
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 42.75;
+            mass = (1.9*MASSMULTI);
         };
     };
 
     class BWA3_P2A1: Pistol_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 11.7;
+            mass = (0.52*MASSMULTI);
         };
     };
 
@@ -57,7 +58,7 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 6.2;
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 81.675;
+            mass = (3.63*MASSMULTI);
         };
         class AG40: UGL_F {
             magazines[] = {"1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell","ACE_HuntIR_M203"};
@@ -68,19 +69,19 @@ class CfgWeapons {
         ACE_barrelLength = 318;
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 75.825;
+            mass = (3.37*MASSMULTI);
         };
     };
 
     class BWA3_G36_AG: BWA3_G36 {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = (81.675+GLM_MASS);
+            mass = ((3.63*MASSMULTI)+GLM_MASS);
         };
     };
 
     class BWA3_G36K_AG: BWA3_G36K {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = (75.825+GLM_MASS);
+            mass = ((3.37*MASSMULTI)+GLM_MASS);
         };
     };
 
@@ -94,7 +95,7 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 3.1;
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 80.1;
+            mass = (3.56*MASSMULTI);
         };
         class AG40: UGL_F {
             magazines[] = {"1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell","ACE_HuntIR_M203"};
@@ -105,7 +106,7 @@ class CfgWeapons {
         ACE_barrelLength = 368.3; // 14.5"
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 78.525;
+            mass = (3.49*MASSMULTI);
         };
     };
     class BWA3_G38C: BWA3_G38 {
@@ -113,19 +114,19 @@ class CfgWeapons {
         ACE_barrelLength = 279.4; // 11"
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 70.2;
+            mass = (3.12*MASSMULTI);
         };
     };
 
     class BWA3_G38_AG: BWA3_G38 {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = (80.1*GLM_MASS);
+            mass = ((3.56*MASSMULTI)+GLM_MASS);
         };
     };
 
     class BWA3_G38K_AG: BWA3_G38 {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = (78.525+GLM_MASS);
+            mass = ((3.49*MASSMULTI)+GLM_MASS);
         };
     };
 
@@ -141,7 +142,7 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 3.6;
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = (115.875+8.91); // Weapon + Bipod
+            mass = ((5.8+0.7)*MASSMULTI); // Weapon + Bipod
         };
     };
     class BWA3_G28_Assault: BWA3_G28_Standard {
@@ -150,7 +151,7 @@ class CfgWeapons {
         ACE_gunbag_allowGunbag = 0;
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 115.875;
+            mass = (5.1*MASSMULTI);
         };
     };
     class BWA3_G27: BWA3_G28_Standard {
@@ -159,12 +160,12 @@ class CfgWeapons {
         ACE_gunbag_allowGunbag = 0;
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 99;
+            mass = (4.4*MASSMULTI);
         };
     };
     class BWA3_G27_AG: BWA3_G27 {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = (99*GLM_MASS);
+            mass = ((4.4*MASSMULTI)+GLM_MASS);
         };
         class AG40: UGL_F {
             magazines[] = {"1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell","ACE_HuntIR_M203"};
@@ -181,7 +182,7 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 3.6; //Nothing found so MG5 value
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 247.5;
+            mass = (11.27*MASSMULTI); // Mass without bipod
         };
     };
 
@@ -193,7 +194,7 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 4.0;
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 165.375;
+            mass = (8.14*MASSMULTI);
         };
     };
 
@@ -205,7 +206,7 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 3.6;
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 252;
+            mass = (11.6*MASSMULTI);
         };
     };
 
@@ -216,7 +217,7 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 3.8;
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 290.25;
+            mass = (11.8*MASSMULTI);
         };
     };
 
@@ -231,13 +232,13 @@ class CfgWeapons {
         ACE_overpressure_damage = 0.8;
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 320;
+            mass = (14.3*MASSMULTI);
         };
     };
 
     class BWA3_Pzf3_Used: BWA3_Pzf3 {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 66;
+            mass = (10*MASSMULTI);
         };
     };
 
@@ -247,13 +248,13 @@ class CfgWeapons {
         ACE_overpressure_damage = 0.5;
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 198;
+            mass = (8.7*MASSMULTI);
         };
     };
 
     class BWA3_RGW90_Used: BWA3_RGW90 {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 58;
+            mass = (4.4*MASSMULTI);
         };
     };
 
@@ -262,6 +263,10 @@ class CfgWeapons {
         ACE_overpressure_range = 3.5;
         ACE_overpressure_damage = 0.5;
         ACE_reloadlaunchers_enabled = 1;
+
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+           mass = (15.8*MASSMULTI);
+        };
     };
 
     class BWA3_CarlGustaf: Launcher_Base_F {
@@ -271,7 +276,7 @@ class CfgWeapons {
         ACE_reloadlaunchers_enabled = 1;
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-           mass = 187;
+           mass = (14.2*MASSMULTI); // M2 variant
         };
     };
 
