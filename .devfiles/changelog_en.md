@@ -1,5 +1,6 @@
 #1.6-1
 - added: MG3 support
+- added: Realistic weights to weapons
 - changed: SD bullets parsing now ace_advanced_ballistics
 
 #v1.5-2

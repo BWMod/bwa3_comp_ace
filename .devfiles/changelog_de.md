@@ -1,5 +1,6 @@
 ﻿#v1.6-1
 - hinzugefügt: MG3 Support
+- hinzugefügt: Realistische Gewichte für Waffen
 - geändert: SD nun ace_advanced_ballistics konform
 
 #v1.5-2
