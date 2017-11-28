@@ -1,4 +1,7 @@
 
+#define MASSMULTI 22
+#define GLM_MASS (1.27*MASSMULTI)
+
 class PointerSlot;
 
 class asdg_SlotInfo;
@@ -22,6 +25,7 @@ class CfgWeapons {
             class PointerSlot: PointerSlot {
                 compatibleItems[] = {"BWA3_acc_LLM01_irlaser","BWA3_acc_LLM01_flash","BWA3_acc_LLM01_laser"};
             };
+            mass = (0.77*MASSMULTI);
         };
     };
 
@@ -29,9 +33,23 @@ class CfgWeapons {
         ACE_barrelTwist = 160.02;
         ACE_barrelLength = 180;
         ACE_RailHeightAboveBore = 4.0;
+
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = (1.9*MASSMULTI);
+        };
     };
 
-    class Rifle_Base_F;
+    class BWA3_P2A1: Pistol_Base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = (0.52*MASSMULTI);
+        };
+    };
+
+    class Rifle;
+    class Rifle_Base_F: Rifle {
+        class WeaponSlotsInfo;
+    };
+
     class UGL_F;
 
     class BWA3_G36: Rifle_Base_F {
@@ -39,6 +57,9 @@ class CfgWeapons {
         ACE_barrelLength = 480;
         ACE_RailHeightAboveBore = 6.2;
 
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = (3.63*MASSMULTI);
+        };
         class AG40: UGL_F {
             magazines[] = {"1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell","ACE_HuntIR_M203"};
         };
@@ -46,7 +67,24 @@ class CfgWeapons {
     class BWA3_G36K: BWA3_G36 {
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 318;
+
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = (3.37*MASSMULTI);
+        };
     };
+
+    class BWA3_G36_AG: BWA3_G36 {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = ((3.63*MASSMULTI)+GLM_MASS);
+        };
+    };
+
+    class BWA3_G36K_AG: BWA3_G36K {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = ((3.37*MASSMULTI)+GLM_MASS);
+        };
+    };
+
     class BWA3_G36_LMG: BWA3_G36 {
         ACE_overheating_dispersion = 1;
     };
@@ -56,6 +94,9 @@ class CfgWeapons {
         ACE_barrelLength = 419.1; // 16.5"
         ACE_RailHeightAboveBore = 3.1;
 
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = (3.56*MASSMULTI);
+        };
         class AG40: UGL_F {
             magazines[] = {"1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell","ACE_HuntIR_M203"};
         };
@@ -63,31 +104,69 @@ class CfgWeapons {
     class BWA3_G38K: BWA3_G38 {
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 368.3; // 14.5"
+
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = (3.49*MASSMULTI);
+        };
     };
     class BWA3_G38C: BWA3_G38 {
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 279.4; // 11"
+
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = (3.12*MASSMULTI);
+        };
     };
 
-    class Rifle_Long_Base_F;
+    class BWA3_G38_AG: BWA3_G38 {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = ((3.56*MASSMULTI)+GLM_MASS);
+        };
+    };
+
+    class BWA3_G38K_AG: BWA3_G38 {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = ((3.49*MASSMULTI)+GLM_MASS);
+        };
+    };
+
+    class Rifle_Long_Base_F: Rifle_Base_F {
+        class WeaponSlotsInfo;
+    };
+
     class BWA3_G28_Standard: Rifle_Long_Base_F {
         ACE_overheating_dispersion = 0.75;
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 421;
         ACE_gunbag_allowGunbag = 1;
         ACE_RailHeightAboveBore = 3.6;
+
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = ((5.8+0.7)*MASSMULTI); // Weapon + Bipod
+        };
     };
     class BWA3_G28_Assault: BWA3_G28_Standard {
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 421;
         ACE_gunbag_allowGunbag = 0;
+
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = (5.1*MASSMULTI);
+        };
     };
     class BWA3_G27: BWA3_G28_Standard {
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 406;
         ACE_gunbag_allowGunbag = 0;
+
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = (4.4*MASSMULTI);
+        };
     };
     class BWA3_G27_AG: BWA3_G27 {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = ((4.4*MASSMULTI)+GLM_MASS);
+        };
         class AG40: UGL_F {
             magazines[] = {"1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell","ACE_HuntIR_M203"};
         };
@@ -101,6 +180,10 @@ class CfgWeapons {
         ACE_barrelTwist = 305;
         ACE_barrelLength = 565;
         ACE_RailHeightAboveBore = 3.6; //Nothing found so MG5 value
+
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = (11.27*MASSMULTI); // Mass without bipod
+        };
     };
 
     class BWA3_MG4: Rifle_Long_Base_F {
@@ -109,6 +192,10 @@ class CfgWeapons {
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 480;
         ACE_RailHeightAboveBore = 4.0;
+
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = (8.14*MASSMULTI);
+        };
     };
 
     class BWA3_MG5: Rifle_Long_Base_F {
@@ -117,6 +204,10 @@ class CfgWeapons {
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 550;
         ACE_RailHeightAboveBore = 3.6;
+
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = (11.6*MASSMULTI);
+        };
     };
 
     class BWA3_G82: Rifle_Long_Base_F {
@@ -124,6 +215,10 @@ class CfgWeapons {
         ACE_barrelLength = 736.7;
         ACE_gunbag_allowGunbag = 1;
         ACE_RailHeightAboveBore = 3.8;
+
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = (11.8*MASSMULTI);
+        };
     };
 
     class Launcher;
@@ -137,13 +232,13 @@ class CfgWeapons {
         ACE_overpressure_damage = 0.8;
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 320;
+            mass = (14.3*MASSMULTI);
         };
     };
 
     class BWA3_Pzf3_Used: BWA3_Pzf3 {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 66;
+            mass = (10*MASSMULTI);
         };
     };
 
@@ -153,13 +248,13 @@ class CfgWeapons {
         ACE_overpressure_damage = 0.75;
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 198;
+            mass = (8.7*MASSMULTI);
         };
     };
 
     class BWA3_RGW90_Used: BWA3_RGW90 {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 58;
+            mass = (4.4*MASSMULTI);
         };
     };
 
@@ -168,6 +263,10 @@ class CfgWeapons {
         ACE_overpressure_range = 3.5;
         ACE_overpressure_damage = 0.5;
         ACE_reloadlaunchers_enabled = 1;
+
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+           mass = (15.8*MASSMULTI);
+        };
     };
 
     class BWA3_CarlGustaf: Launcher_Base_F {
@@ -177,7 +276,7 @@ class CfgWeapons {
         ACE_reloadlaunchers_enabled = 1;
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
-           mass = 187;
+           mass = (14.2*MASSMULTI); // M2 variant
         };
     };
 

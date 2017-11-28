@@ -1,5 +1,6 @@
 ﻿#v1.6-1
 - hinzugefügt: MG3 Support
+- hinzugefügt: Realistische Gewichte für Waffen
 - hinzugefügt: LLM01/VarioRay Kartentaschenlampenfunktion
 - geändert: SD nun ace_advanced_ballistics konform
 - geändert: Tastenbelegung Waffenzubehör auf CBA_Accessory umgeschrieben
