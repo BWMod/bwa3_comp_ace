@@ -1,7 +1,10 @@
 #1.6-1
 - added: MG3 support
+- added: LLM01/VarioRay map flashlight function
 - changed: SD bullets parsing now ace_advanced_ballistics
 - changed: Rewritten keybind weapon accessory to CBA_Accessory
+- changed: ZO4x30 removed ACE_scopeadjust
+- changed: Increased RGW90 overpressure damage
 
 #v1.5-2
 

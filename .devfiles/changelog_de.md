@@ -1,7 +1,10 @@
 ﻿#v1.6-1
 - hinzugefügt: MG3 Support
+- hinzugefügt: LLM01/VarioRay Kartentaschenlampenfunktion
 - geändert: SD nun ace_advanced_ballistics konform
 - geändert: Tastenbelegung Waffenzubehör auf CBA_Accessory umgeschrieben
+- geändert: ZO4x30 ACE_scopeadjust entfernt
+- geändert: RGW90 Rückstrahlschaden erhöht
 
 #v1.5-2
 
