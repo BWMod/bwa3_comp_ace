@@ -2,6 +2,7 @@
 - hinzugefügt: MG3 Support
 - geändert: SD nun ace_advanced_ballistics konform
 - geändert: ZO4x30 ACE_scopeadjust entfernt
+- geändert: RGW90 Rückstrahlschaden erhöht
 
 #v1.5-2
 
