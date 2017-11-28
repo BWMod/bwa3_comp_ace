@@ -245,7 +245,7 @@ class CfgWeapons {
     class BWA3_RGW90: Launcher_Base_F {
         ACE_overpressure_angle = 50;
         ACE_overpressure_range = 2.5;
-        ACE_overpressure_damage = 0.5;
+        ACE_overpressure_damage = 0.75;
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = (8.7*MASSMULTI);
@@ -294,48 +294,122 @@ class CfgWeapons {
     };
 
     // ATTACHMENTS
+    class InventoryFlashLightItem_Base_F;
     class BWA3_acc_LLM01_irlaser: ItemCore {
+        MRT_SwitchItemNextClass = "BWA3_acc_LLM01_flash";
+        MRT_SwitchItemPrevClass = "BWA3_acc_LLM01_laser";
         BWA3_nextModeClass = "BWA3_acc_LLM01_laser";
+
+        class ItemInfo: InventoryFlashLightItem_Base_F {
+            class FlashLight {
+                ACE_Flashlight_Colour = "white";
+                ACE_Flashlight_Beam = "\z\ace\addons\map\UI\Flashlight_beam_white_ca.paa";
+                ACE_Flashlight_Size = 2.75;
+                ACE_Flashlight_Sound = 1;
+            };
+        };
     };
 
     class BWA3_acc_LLM01_flash: BWA3_acc_LLM01_irlaser {
+        MRT_SwitchItemNextClass = "BWA3_acc_LLM01_laser";
+        MRT_SwitchItemPrevClass = "BWA3_acc_LLM01_irlaser";
         BWA3_nextModeClass = "BWA3_acc_LLM01_irlaser";
+
+        class ItemInfo: InventoryFlashLightItem_Base_F {
+            class FlashLight {
+                ACE_Flashlight_Colour = "white";
+                ACE_Flashlight_Beam = "\z\ace\addons\map\UI\Flashlight_beam_white_ca.paa";
+                ACE_Flashlight_Size = 2.75;
+                ACE_Flashlight_Sound = 1;
+            };
+        };
     };
 
     class BWA3_acc_LLM01_laser: BWA3_acc_LLM01_irlaser {
         ACE_laserpointer = 1;
+        MRT_SwitchItemNextClass = "BWA3_acc_LLM01_irlaser";
+        MRT_SwitchItemPrevClass = "BWA3_acc_LLM01_flash";
+        MRT_switchItemHintText = "$STR_BWA3_Laser";
         BWA3_nextModeClass = "BWA3_acc_LLM01_flash";
         scope = 1;
+
+        class ItemInfo: InventoryFlashLightItem_Base_F {
+            class FlashLight {
+                ACE_Flashlight_Colour = "white";
+                ACE_Flashlight_Beam = "\z\ace\addons\map\UI\Flashlight_beam_white_ca.paa";
+                ACE_Flashlight_Size = 2.75;
+                ACE_Flashlight_Sound = 1;
+            };
+        };
     };
 
     class BWA3_acc_LLM01_irlaser_underbarrel: BWA3_acc_LLM01_irlaser {
+        MRT_SwitchItemNextClass = "BWA3_acc_LLM01_flash_underbarrel";
+        MRT_SwitchItemPrevClass = "BWA3_acc_LLM01_laser_underbarrel";
         BWA3_nextModeClass = "BWA3_acc_LLM01_flash_underbarrel";
         model = "\bwa3_attachments\bwa3_llm01_underbarrel.p3d";
     };
 
     class BWA3_acc_LLM01_flash_underbarrel: BWA3_acc_LLM01_flash {
+        MRT_SwitchItemNextClass = "BWA3_acc_LLM01_laser_underbarrel";
+        MRT_SwitchItemPrevClass = "BWA3_acc_LLM01_irlaser_underbarrel";
         BWA3_nextModeClass = "BWA3_acc_LLM01_irlaser_underbarrel";
         model = "\bwa3_attachments\bwa3_llm01_underbarrel.p3d";
     };
 
     class BWA3_acc_LLM01_laser_underbarrel: BWA3_acc_LLM01_laser {
+        MRT_SwitchItemNextClass = "BWA3_acc_LLM01_irlaser_underbarrel";
+        MRT_SwitchItemPrevClass = "BWA3_acc_LLM01_flash_underbarrel";
         BWA3_nextModeClass = "BWA3_acc_LLM01_irlaser_underbarrel";
         model = "\bwa3_attachments\bwa3_llm01_underbarrel.p3d";
     };
 
-
     class BWA3_acc_VarioRay_irlaser: ItemCore {
+        MRT_SwitchItemNextClass = "BWA3_acc_VarioRay_flash";
+        MRT_SwitchItemPrevClass = "BWA3_acc_VarioRay_laser";
         BWA3_nextModeClass = "BWA3_acc_VarioRay_laser";
+
+        class ItemInfo: InventoryFlashLightItem_Base_F {
+            class FlashLight {
+                ACE_Flashlight_Colour = "white";
+                ACE_Flashlight_Beam = "\z\ace\addons\map\UI\Flashlight_beam_white_ca.paa";
+                ACE_Flashlight_Size = 2.75;
+                ACE_Flashlight_Sound = 1;
+            };
+        };
     };
 
     class BWA3_acc_VarioRay_flash: BWA3_acc_VarioRay_irlaser {
+        MRT_SwitchItemNextClass = "BWA3_acc_VarioRay_laser";
+        MRT_SwitchItemPrevClass = "BWA3_acc_VarioRay_irlaser";
         BWA3_nextModeClass = "BWA3_acc_VarioRay_irlaser";
+
+        class ItemInfo: InventoryFlashLightItem_Base_F {
+            class FlashLight {
+                ACE_Flashlight_Colour = "white";
+                ACE_Flashlight_Beam = "\z\ace\addons\map\UI\Flashlight_beam_white_ca.paa";
+                ACE_Flashlight_Size = 2.75;
+                ACE_Flashlight_Sound = 1;
+            };
+        };
     };
 
     class BWA3_acc_VarioRay_laser: BWA3_acc_VarioRay_irlaser {
+        MRT_SwitchItemNextClass = "BWA3_acc_VarioRay_irlaser";
+        MRT_SwitchItemPrevClass = "BWA3_acc_VarioRay_flash";
+        MRT_switchItemHintText = "$STR_BWA3_Laser";
         ACE_laserpointer = 1;
         BWA3_nextModeClass = "BWA3_acc_VarioRay_flash";
         scope = 1;
+
+        class ItemInfo: InventoryFlashLightItem_Base_F {
+            class FlashLight {
+                ACE_Flashlight_Colour = "white";
+                ACE_Flashlight_Beam = "\z\ace\addons\map\UI\Flashlight_beam_white_ca.paa";
+                ACE_Flashlight_Size = 2.75;
+                ACE_Flashlight_Sound = 1;
+            };
+        };
     };
 
     // OPTICS
@@ -363,10 +437,6 @@ class CfgWeapons {
     };
 
     class BWA3_optic_ZO4x30: ItemCore {
-        ACE_scopeadjust_vertical[] = {-10, 10};
-        ACE_scopeadjust_verticalIncrement = 0.2;
-        ACE_scopeadjust_horizontal[] = {-10, 10};
-        ACE_scopeadjust_horizontalIncrement = 0.2;
         ACE_ScopeHeightAboveRail = 2.8;
 
         class ItemInfo : InventoryOpticsItem_Base_F {
@@ -434,11 +504,5 @@ class CfgWeapons {
     class Uniform_Base;
     class BWA3_Uniform_Helipilot: Uniform_Base {
         ACE_GForceCoef = 0.8;
-    };
-
-    // remove after ACE update
-    class RocketPods;
-    class BWA3_PARS: RocketPods {
-        canLock = 2;
     };
 };
