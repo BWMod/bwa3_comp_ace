@@ -332,10 +332,4 @@ class CfgWeapons {
     class BWA3_Uniform_Helipilot: Uniform_Base {
         ACE_GForceCoef = 0.8;
     };
-
-    // remove after ACE update
-    class RocketPods;
-    class BWA3_PARS: RocketPods {
-        canLock = 2;
-    };
 };
