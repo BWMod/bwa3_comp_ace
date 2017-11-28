@@ -264,10 +264,6 @@ class CfgWeapons {
     };
 
     class BWA3_optic_ZO4x30: ItemCore {
-        ACE_scopeadjust_vertical[] = {-10, 10};
-        ACE_scopeadjust_verticalIncrement = 0.2;
-        ACE_scopeadjust_horizontal[] = {-10, 10};
-        ACE_scopeadjust_horizontalIncrement = 0.2;
         ACE_ScopeHeightAboveRail = 2.8;
 
         class ItemInfo : InventoryOpticsItem_Base_F {
