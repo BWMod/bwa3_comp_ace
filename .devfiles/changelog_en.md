@@ -1,4 +1,5 @@
 #1.6-1
+
 - added: MG3 support
 - added: Realistic weights to weapons
 - added: LLM01/VarioRay map flashlight function
