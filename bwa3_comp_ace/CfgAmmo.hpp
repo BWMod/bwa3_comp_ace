@@ -155,4 +155,10 @@ class CfgAmmo {
         ace_frag_gurney_c = 2930; // Gurney velocity constant for PETN
         ace_frag_gurney_k = 1/2; // shape factor for a cylinder
     };
+
+    class MineBase;
+    class BWA3_DM31AT_Range_Ammo: MineBase {
+        mineTrigger = "ACE_MagneticTrigger";
+        ACE_explosives_explodeOnDefuseChance = 0.06;
+    };
 };
