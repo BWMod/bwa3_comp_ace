@@ -3,6 +3,7 @@
 - hinzugefügt: MG3 Support
 - hinzugefügt: Realistische Gewichte für Waffen
 - hinzugefügt: LLM01/VarioRay Kartentaschenlampenfunktion
+- hinzugefügt: DM31 AT ACE_explosives Unterstützung
 - hinzugefügt: G38 Rückstoß
 - hinzugefügt: ACE_frag zu HE Munition (Splitterwirkung)
 - geändert: SD nun ace_advanced_ballistics konform

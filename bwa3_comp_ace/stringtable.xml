@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="BWA3">
+    <Package name="Comp_Ace">
+        <Key ID="STR_BWA3_Comp_Ace_SLAME_Magnetic">
+            <English>Magnetic Influence Sensor (Bottom Attack)</English>
+            <Polish>Czujnik magnetyczny (wybuch w górę)</Polish>
+            <Spanish>Sensor IM (ataque inferior)</Spanish>
+            <German>Magnetfeldsensor (Bodenangriff)</German>
+            <French>Capteur magnétique (par le bas)</French>
+            <Czech>Magnetický Senzor (Výbuch ze spoda)</Czech>
+            <Italian>Sensore Magnetico di Prossimità (attacco inferiore)</Italian>
+            <Hungarian>Mágneses mező érzékelő (Bottom Attack)</Hungarian>
+            <Portuguese>Influência magnética (ataque inferior)</Portuguese>
+            <Russian>Магнитный сенсор (детонация вверх)</Russian>
+            <Japanese>磁気感知式 (下からの攻撃)</Japanese>
+            <Korean>자기장 감지센서 (바닥 공격)</Korean>
+            <Chinesesimp>磁性感应器 (底部攻击)</Chinesesimp>
+            <Chinese>磁性感應器 (底部攻擊)</Chinese>
+        </Key>
+    </Package>
+</Project>

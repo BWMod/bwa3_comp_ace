@@ -157,6 +157,12 @@ class CfgAmmo {
         ACE_barrelLengths[] = {};
     };
 
+    class MineBase;
+    class BWA3_DM31AT_Range_Ammo: MineBase {
+        mineTrigger = "ACE_MagneticTrigger";
+        ACE_explosives_explodeOnDefuseChance = 0.06;
+    };
+
     class GrenadeHand;
     class BWA3_G_DM51A1: GrenadeHand {
         ace_frag_metal = 296;
@@ -204,5 +210,6 @@ class CfgAmmo {
         ACE_frag_charge = 32;
         ACE_frag_gurney_c = 2700;
         ACE_frag_gurney_k = 1/2;
+>>>>>>> ff7a47d629a94707d23187984e66907e90f993b8
     };
 };

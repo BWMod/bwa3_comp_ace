@@ -340,4 +340,24 @@ class CfgVehicles {
         ACE_dragging_canCarry = 0;
         ACE_dragging_canDrag = 0;
     };
+
+    class Items_base_F;
+    class ACE_Explosives_Place: Items_base_F {};
+
+    class BWA3_DM31AT: ACE_Explosives_Place {
+        mapSize = 0.33000001;
+        author = "$STR_BWA3_Author";
+        _generalMacro = "BWA3_DM31AT";
+        scope = 2;
+        displayName = "$STR_BWA3_DM31ATName";
+        descriptionShort = "$STR_BWA3_DM31ATDescription";
+        model = "\bwa3_explosives\bwa3_dm31at.p3d";
+        picture = "\bwa3_explosives\ui\bwa3_dm31at_x_ca.paa";
+        icon = "iconExplosiveAT";
+        editorPreview = "\bwa3_explosives\editorpreview\bwa3_dm31at.jpg";
+
+        class Library {
+            libTextDesc = "$STR_A3_cfgMagazines_Mine_Library0";
+        };
+    };
 };
