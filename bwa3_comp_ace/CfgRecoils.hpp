@@ -40,6 +40,22 @@ class CfgRecoils {
         temporary = 0.005*MUZZLETEMP;
     };
 
+    class BWA3_recoil_G38: recoil_default {
+        muzzleOuter[] = {0.2*MUZZLERIGHT_POS,0.6*MUZZLECLIMB_POS,0.2*MUZZLERIGHT_MAG,0.3*MUZZLECLIMB_MAG};
+        kickBack[] = {0.01*KICKBACK,0.03*KICKBACK};
+        temporary = 0.01*MUZZLETEMP;
+    };
+    class BWA3_recoil_G38K: recoil_default {
+        muzzleOuter[] = {0.2*MUZZLERIGHT_POS,0.8*MUZZLECLIMB_POS,0.3*MUZZLERIGHT_MAG,0.3*MUZZLECLIMB_MAG};
+        kickBack[] = {0.02*KICKBACK,0.04*KICKBACK};
+        temporary = 0.015*MUZZLETEMP;
+    };
+    class BWA3_recoil_G38C: recoil_default {
+        muzzleOuter[] = {0.2*MUZZLERIGHT_POS,1.0*MUZZLECLIMB_POS,0.3*MUZZLERIGHT_MAG,0.3*MUZZLECLIMB_MAG};
+        kickBack[] = {0.02*KICKBACK,0.04*KICKBACK};
+        temporary = 0.015*MUZZLETEMP;
+    };
+
     class BWA3_recoil_G28: recoil_default {
         muzzleOuter[] = {0.4*MUZZLERIGHT_POS,1.4*MUZZLECLIMB_POS,0.6*MUZZLERIGHT_MAG,0.4*MUZZLECLIMB_MAG};
         kickBack[] = {0.03*KICKBACK,0.07*KICKBACK};

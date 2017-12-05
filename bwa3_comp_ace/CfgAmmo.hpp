@@ -125,7 +125,16 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {900};
         ACE_barrelLengths[] = {736.6};
     };
-    class BWA3_B_127x99_Ball_Raufoss: BWA3_B_127x99_Ball {}; // B_127x99_Ball, AtragMx GunList: "12.7x99mm"
+    class BWA3_B_127x99_Ball_Raufoss: BWA3_B_127x99_Ball {
+        // HE gren with less metal parts
+        ACE_frag_enabled = 1;
+        ACE_frag_force = 1;
+        ace_frag_metal = 180;
+        ace_frag_charge = 180;
+        ace_frag_gurney_c = 2930; // Gurney velocity constant for PETN
+        ace_frag_gurney_k = 1/2; // shape factor for a cylinder
+        ACE_frag_classes[] = {"ACE_Frag_tiny_HD"};
+    }; // B_127x99_Ball, AtragMx GunList: "12.7x99mm"
 
     class BulletBase;
     class BWA3_B_46x30_Ball: BulletBase {
@@ -148,6 +157,12 @@ class CfgAmmo {
         ACE_barrelLengths[] = {};
     };
 
+    class MineBase;
+    class BWA3_DM31AT_Range_Ammo: MineBase {
+        mineTrigger = "ACE_MagneticTrigger";
+        ACE_explosives_explodeOnDefuseChance = 0.06;
+    };
+
     class GrenadeHand;
     class BWA3_G_DM51A1: GrenadeHand {
         ace_frag_metal = 296;
@@ -156,9 +171,45 @@ class CfgAmmo {
         ace_frag_gurney_k = 1/2; // shape factor for a cylinder
     };
 
-    class MineBase;
-    class BWA3_DM31AT_Range_Ammo: MineBase {
-        mineTrigger = "ACE_MagneticTrigger";
-        ACE_explosives_explodeOnDefuseChance = 0.06;
+    class RocketBase;
+    class BWA3_R_RGW90_HH: RocketBase {
+        ACE_frag_enabled = 1;
+        ACE_frag_force = 1;
+        ACE_frag_metal = 400;
+        ACE_frag_charge = 210;
+        ACE_frag_gurney_c = 2800;
+        ACE_frag_gurney_k = "3/5";
+        ACE_frag_classes[] = {"ACE_frag_medium_HD"};
+    };
+
+    class BWA3_R_Pzf3_IT: RocketBase {
+        ACE_frag_skip = 1;
+    };
+
+    class BWA3_R_CarlGustaf_HEAT: RocketBase {
+        ACE_frag_skip = 1;
+    };
+    class BWA3_R_CarlGustaf_HE: BWA3_R_CarlGustaf_HEAT {
+        ACE_frag_skip = 0;
+        ACE_frag_enabled = 1;
+        ACE_frag_force = 1;
+        ACE_frag_metal = 400;
+        ACE_frag_charge = 210;
+        ACE_frag_gurney_c = 2800;
+        ACE_frag_gurney_k = "3/5";
+        ACE_frag_classes[] = {"ACE_frag_medium_HD"};
+    };
+
+    class B_30mm_MP_Tracer_Red;
+    class BWA3_B_30mm_HE: B_30mm_MP_Tracer_Red {
+        // 40mm HE gren with less metal parts
+        ACE_frag_enabled = 1;
+        ACE_frag_force = 1;
+        ACE_frag_classes[] = {"ACE_Frag_tiny_HD"};
+        ACE_frag_metal = 120;
+        ACE_frag_charge = 32;
+        ACE_frag_gurney_c = 2700;
+        ACE_frag_gurney_k = 1/2;
+>>>>>>> ff7a47d629a94707d23187984e66907e90f993b8
     };
 };
