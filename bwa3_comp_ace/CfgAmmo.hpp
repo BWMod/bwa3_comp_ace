@@ -168,6 +168,7 @@ class CfgAmmo {
     class RocketBase;
     class BWA3_R_RGW90_HH: RocketBase {
         ACE_frag_enabled = 1;
+        ACE_frag_force = 1;
         ACE_frag_metal = 400;
         ACE_frag_charge = 210;
         ACE_frag_gurney_c = 2800;
@@ -185,6 +186,7 @@ class CfgAmmo {
     class BWA3_R_CarlGustaf_HE: BWA3_R_CarlGustaf_HEAT {
         ACE_frag_skip = 0;
         ACE_frag_enabled = 1;
+        ACE_frag_force = 1;
         ACE_frag_metal = 400;
         ACE_frag_charge = 210;
         ACE_frag_gurney_c = 2800;
