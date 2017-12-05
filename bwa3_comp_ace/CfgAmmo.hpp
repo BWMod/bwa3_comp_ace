@@ -210,6 +210,5 @@ class CfgAmmo {
         ACE_frag_charge = 32;
         ACE_frag_gurney_c = 2700;
         ACE_frag_gurney_k = 1/2;
->>>>>>> ff7a47d629a94707d23187984e66907e90f993b8
     };
 };
