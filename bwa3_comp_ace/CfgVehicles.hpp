@@ -160,6 +160,17 @@ class CfgVehicles {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 position = "[0,-1.5,1.3]";
+                class BWA3_AmmoDialog {
+                    displayName = "$STR_BWA3_Comp_Ace_ConfigureAmmoLoad";
+                    selection = "";
+                    position = "";
+                    showDisabled = 0;
+                    priority = 2;
+                    distance = 4;
+                    icon = "\A3\ui_f\data\igui\cfg\simpletasks\types\rearm_ca.paa";
+                    condition = "[_target] call BWA3_fnc_canOpenAmmoDialog";
+                    statement = "[_target,[0]] call BWA3_fnc_openAmmoDialog";
+                };
             };
 
             class BWA3_CamoNet_show {

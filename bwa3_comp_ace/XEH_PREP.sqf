@@ -1,0 +1,2 @@
+PREP(canOpenAmmoDialog);
+PREP(openAmmoDialog);

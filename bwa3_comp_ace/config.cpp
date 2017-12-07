@@ -16,3 +16,5 @@ class CfgPatches {
 #include "CfgAmmo.hpp"
 #include "CfgGlasses.hpp"
 #include "CfgRecoils.hpp"
+#include "CfgEventhandlers.hpp"
+#include "dialog.hpp"

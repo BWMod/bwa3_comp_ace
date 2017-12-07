@@ -17,5 +17,17 @@
             <Chinesesimp>磁性感应器 (底部攻击)</Chinesesimp>
             <Chinese>磁性感應器 (底部攻擊)</Chinese>
         </Key>
+        <Key ID="STR_BWA3_Comp_Ace_AmmoDialog">
+            <English>Ammunition Dialog</English>
+            <German>Munitionsauswahl</German>
+        </Key>
+        <Key ID="STR_BWA3_Comp_Ace_ConfigureAmmoLoad">
+            <English>Configure Ammo Load</English>
+            <German>Munitionsauswahl</German>
+        </Key>
+        <Key ID="STR_BWA3_Comp_Ace_ConfigureAmmoLoadAllowed">
+            <English>Ammodialog allowed</English>
+            <German>Munitionsauswahl erlaubt</German>
+        </Key>
     </Package>
 </Project>
