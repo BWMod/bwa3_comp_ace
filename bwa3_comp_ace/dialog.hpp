@@ -57,9 +57,9 @@ class BWA3_AmmoDialog {
             type = CT_CONTROLS_TABLE;
             style = SL_TEXTURES;
 
-            lineSpacing = 0;
-            rowHeight = 1 * GUI_GRID_H;
-            headerHeight = 1 * GUI_GRID_H;
+            lineSpacing = 0.1 * GUI_GRID_H;
+            rowHeight = 1.1 * GUI_GRID_H;
+            headerHeight = 1.2 * GUI_GRID_H;
 
             firstIDC = IDC_BWA3_MAGAZINEDIALOG_CONTROLSTABLE_START;
             lastIDC = IDC_BWA3_MAGAZINEDIALOG_CONTROLSTABLE_END;
@@ -111,15 +111,15 @@ class BWA3_AmmoDialog {
                 class Column2 {
                     controlBaseClassPath[] = {"RscXSliderH"};
                     columnX = 8 * GUI_GRID_W;
-                    columnW = 10 * GUI_GRID_W;
-                    controlOffsetY = 0.1 * GUI_GRID_H;
+                    columnW = 11 * GUI_GRID_W;
+                    controlOffsetY = 0.3 * GUI_GRID_H;
                     controlH = 0.8 * GUI_GRID_H;
                 };
                 class Column3 {
                     controlBaseClassPath[] = {"RscEdit"};
-                    columnX = 19 * GUI_GRID_W;
+                    columnX = 20 * GUI_GRID_W;
                     columnW = 2 * GUI_GRID_W;
-                    controlOffsetY = 0;
+                    controlOffsetY = 0.3 * GUI_GRID_H;
                     controlH = 1 * GUI_GRID_H;
                 };
             };
