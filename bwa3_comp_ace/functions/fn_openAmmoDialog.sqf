@@ -45,13 +45,14 @@ private _curMagazinesTurret = BWA3_Comp_ACE_ammoDialog_curVehicle magazinesTurre
 #define UPDATE_VALUES private _curMagazinesAmout = BWA3_Comp_ACE_ammoDialog_MaxMagazineAmount - _value; \
 { \
     ([BWA3_Comp_ACE_ammoDialog_curHash, _x] call CBA_fnc_hashGet) params ["_curAmount", "_ctrlSlider", "_ctrlEdit"]; \
-    If ((_curMagazineAmount - _curAmount) <= 0) then { \
-        _curAmount = _curMagazineAmount; \
+    If ((_curMagazinesAmout - _curAmount) <= 0) then { \
+        _curAmount = _curMagazinesAmout; \
         _ctrlSlider sliderSetPosition _curAmount; \
-        _ctrlEdit setText str _curAmount; \
+        _ctrlEdit ctrlsetText str _curAmount; \
         [BWA3_Comp_ACE_ammoDialog_curHash, _x, [_curAmount, _ctrlSlider, _ctrlEdit]] call CBA_fnc_hashSet; \
     }; \
-    _curMagazinesAmout = _curMagazineAmount - _curAmount; \
+    _curMagazinesAmout = _curMagazinesAmout - _curAmount; \
+    nil \
 } count (([BWA3_Comp_ACE_ammoDialog_curHash] call CBA_fnc_hashKeys) - [_curMagazine]); \
 [BWA3_Comp_ACE_ammoDialog_curHash, _curMagazine, [_value, _ctrlSlider, _ctrlEdit]] call CBA_fnc_hashSet
 
