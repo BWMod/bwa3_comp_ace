@@ -16,7 +16,7 @@ class BWA3_AmmoDialog {
         class TextTitlebar: RscText {
             idc = IDC_BWA3_MAGAZINEDIALOG_TITLE;
             text = "$STR_BWA3_Comp_Ace_AmmoDialog";
-            x = GUI_GRID_CENTER_X;
+            x = GUI_GRID_CENTER_X + GUI_GRID_W * 8;
             y = GUI_GRID_CENTER_Y;
             w = GUI_GRID_W * 24;
             h = GUI_GRID_H;
@@ -25,18 +25,18 @@ class BWA3_AmmoDialog {
         };
         class BackgroundDialog: RscText {
             idc = IDC_BWA3_MAGAZINEDIALOG_BACK;
-            x = GUI_GRID_CENTER_X;
+            x = GUI_GRID_CENTER_X + GUI_GRID_W * 8;
             y = GUI_GRID_CENTER_Y + GUI_GRID_H;
             w = GUI_GRID_W * 24;
             h = GUI_GRID_H * 15;
-            colorBackground[] = {0,0,0,0.3};
+            colorBackground[] = {0,0,0,0.5};
             text = "";
         };
         class ButtonApply: RscButtonMenu {
             idc = IDC_OK;
             //action = QUOTE(call FUNC(onButtonApply));
             text = "$STR_ui_debug_but_apply";
-            x = GUI_GRID_CENTER_X + GUI_GRID_W * 16;
+            x = GUI_GRID_CENTER_X + GUI_GRID_W * 24;
             y = GUI_GRID_CENTER_Y + GUI_GRID_H * 16;
             w = GUI_GRID_W * 8;
             h = GUI_GRID_H;
@@ -45,11 +45,11 @@ class BWA3_AmmoDialog {
             idc = IDC_CANCEL;
             text = "$STR_disp_cancel";
             //action = QUOTE(call FUNC(onButtonClose));
-            x = GUI_GRID_CENTER_X + GUI_GRID_W * 8;
+            x = GUI_GRID_CENTER_X + GUI_GRID_W * 16;
         };
         class ControlsTable {
             idc = IDC_BWA3_MAGAZINEDIALOG_CONTROLSTABLE;
-            x = GUI_GRID_CENTER_X + GUI_GRID_W;
+            x = GUI_GRID_CENTER_X + GUI_GRID_W * 9;
             y = GUI_GRID_CENTER_Y + GUI_GRID_H * 2;
             w = GUI_GRID_W * 22;
             h = GUI_GRID_H * 13;
