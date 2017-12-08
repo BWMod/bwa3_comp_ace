@@ -6,14 +6,14 @@ ADDON = false;
 
 ADDON = true;
 
-If (isNil "BWA3_ammoDialogDistance") then {
-    BWA3_ammoDialogDistance = 25;
+If (isNil "BWA3_MagazineDialogDistance") then {
+    BWA3_MagazineDialogDistance = 25;
 };
 
 [
-    "BWA3_ammoDialogAllowed",
+    "BWA3_MagazineDialogAllowed",
     "CHECKBOX",
-    "STR_BWA3_Comp_Ace_ConfigureAmmoLoadAllowed",
+    "STR_BWA3_Comp_Ace_ConfigureMagazinesLoadAllowed",
     localize "STR_BWA3_FactionClassBundeswehrName",
     true,
     1

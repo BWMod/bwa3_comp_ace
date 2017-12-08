@@ -73,7 +73,7 @@ class CfgVehicles {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 position = "[0,-1.0,1.3]";
-                class BWA3_AmmoDialog {
+                class BWA3_MagazineDialog {
                     displayName = "$STR_BWA3_Comp_Ace_ConfigureAmmoLoad";
                     selection = "";
                     position = "";
@@ -81,8 +81,8 @@ class CfgVehicles {
                     priority = 2;
                     distance = 4;
                     icon = "\A3\ui_f\data\igui\cfg\simpletasks\types\rearm_ca.paa";
-                    condition = "[_target] call BWA3_fnc_canOpenAmmoDialog";
-                    statement = "[_target,[0]] call BWA3_fnc_openAmmoDialog";
+                    condition = "[_target] call BWA3_fnc_canOpenMagazineDialog";
+                    statement = "[_target,[0]] call BWA3_fnc_OpenMagazineDialog";
                 };
             };
 
@@ -171,7 +171,7 @@ class CfgVehicles {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 position = "[0,-1.5,1.3]";
-                class BWA3_AmmoDialog {
+                class BWA3_MagazineDialog {
                     displayName = "$STR_BWA3_Comp_Ace_ConfigureAmmoLoad";
                     selection = "";
                     position = "";
@@ -179,8 +179,8 @@ class CfgVehicles {
                     priority = 2;
                     distance = 4;
                     icon = "\A3\ui_f\data\igui\cfg\simpletasks\types\rearm_ca.paa";
-                    condition = "[_target] call BWA3_fnc_canOpenAmmoDialog";
-                    statement = "[_target,[0]] call BWA3_fnc_openAmmoDialog";
+                    condition = "[_target] call BWA3_fnc_canOpenMagazineDialog";
+                    statement = "[_target,[0]] call BWA3_fnc_OpenMagazineDialog";
                 };
             };
 

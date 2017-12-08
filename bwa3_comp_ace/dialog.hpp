@@ -5,17 +5,15 @@
 /*extern*/ class RscButtonMenu;
 
 
-class BWA3_AmmoDialog {
+class BWA3_MagazineDialog {
     idd = IDD_BWA3_MAGAZINEDIALOG;
-    name = "$STR_BWA3_Comp_Ace_AmmoDialog";
+    name = "$STR_BWA3_Comp_Ace_MagazineDialog";
     enableSimulation = 1;
-    //onLoad = "call BWA3_fnc_onLoad_Ammo";
-    //onUnload = "call BWA3_fnc_onUnload_Ammo";
 
     class Controls {
         class TextTitlebar: RscText {
             idc = IDC_BWA3_MAGAZINEDIALOG_TITLE;
-            text = "$STR_BWA3_Comp_Ace_AmmoDialog";
+            text = "$STR_BWA3_Comp_Ace_MagazineDialog";
             x = GUI_GRID_CENTER_X + GUI_GRID_W * 8;
             y = GUI_GRID_CENTER_Y;
             w = GUI_GRID_W * 24;

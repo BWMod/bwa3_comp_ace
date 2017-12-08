@@ -1,2 +1,3 @@
-PREP(canOpenAmmoDialog);
-PREP(openAmmoDialog);
+PREP(canOpenMagazineDialog);
+PREP(OpenMagazineDialog);
+PREP(loadMagazines);

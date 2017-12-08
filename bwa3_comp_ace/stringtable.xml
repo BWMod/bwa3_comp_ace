@@ -17,7 +17,7 @@
             <Chinesesimp>磁性感应器 (底部攻击)</Chinesesimp>
             <Chinese>磁性感應器 (底部攻擊)</Chinese>
         </Key>
-        <Key ID="STR_BWA3_Comp_Ace_AmmoDialog">
+        <Key ID="STR_BWA3_Comp_Ace_MagazineDialog">
             <English>Ammunition Dialog</English>
             <German>Munitionsauswahl</German>
         </Key>
@@ -25,9 +25,17 @@
             <English>Configure Ammo Load</English>
             <German>Munitionsauswahl</German>
         </Key>
-        <Key ID="STR_BWA3_Comp_Ace_ConfigureAmmoLoadAllowed">
-            <English>Ammodialog allowed</English>
+        <Key ID="STR_BWA3_Comp_Ace_ConfigureMagazinesLoadAllowed">
+            <English>Magazine dialog allowed</English>
             <German>Munitionsauswahl erlaubt</German>
+        </Key>
+        <Key ID="STR_BWA3_Comp_Ace_loadingMagazines">
+            <English>Loading Magazine...</English>
+            <German>Magazin wird verladen...</German>
+        </Key>
+        <Key ID="STR_BWA3_Comp_Ace_loadingStopped">
+            <English>Loading Magazine stopped</English>
+            <German>Magazine verladen abgebrochen</German>
         </Key>
     </Package>
 </Project>
