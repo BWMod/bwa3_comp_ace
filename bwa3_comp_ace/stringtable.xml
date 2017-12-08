@@ -30,8 +30,8 @@
             <German>Munitionsauswahl erlaubt</German>
         </Key>
         <Key ID="STR_BWA3_Comp_Ace_loadingMagazines">
-            <English>Loading Magazine...</English>
-            <German>Magazin wird verladen...</German>
+            <English>Rearming...</English>
+            <German>Aufmunitionieren...</German>
         </Key>
         <Key ID="STR_BWA3_Comp_Ace_loadingStopped">
             <English>Loading Magazine stopped</English>

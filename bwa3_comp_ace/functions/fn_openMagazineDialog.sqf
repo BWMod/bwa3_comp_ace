@@ -27,7 +27,7 @@ _dialog setVariable ["BWA3_comp_ace_magazineDialog_hash", _hash];
 private _MaxMagazineAmount = _vehicle getVariable ["BWA3_maxMagazineLoad", count (getArray((_this call CBA_fnc_getTurret) >> "magazines"))];
 _dialog setVariable ["BWA3_comp_ace_magazineDialog_MaxMagazineAmount", _MaxMagazineAmount];
 private _Weapons = _vehicle weaponsTurret _turret;
-private _curMagazinesTurret = _vehicle magazinesTurret _turret;
+private _curMagazinesTurret = ((magazinesAllTurrets _vehicle) select {((_x select 1) isEqualTo _turret) && ((_x select 2) > 0)});
 
 {
     private _possibleMagazines = getArray(configFile >> "CfgWeapons" >> _x >> "magazines");
@@ -114,29 +114,10 @@ _dialog displayAddEventHandler ["Unload", {
     private _turret = _dialog getVariable "BWA3_comp_ace_magazineDialog_turret";
     private _hash = _dialog getVariable "BWA3_comp_ace_magazineDialog_hash";
 
-    /*
-        for testing purpose - to be removed later
-    */
-    if (missionNamespace getVariable ["BWA3_testing", true]) exitWith {
-        {
-            private _ammo = _x;
-            ([_hash, _ammo] call CBA_fnc_hashGet) params ["_amount"];
-            _vehicle removeMagazinesTurret [_ammo, _turret];
-            for "_i" from 1 to _amount do {
-                _vehicle addMagazineTurret [_ammo, _turret];
-            };
-            nil
-        } count ([_hash] call CBA_fnc_hashKeys);
-    };
-
-    private _curMagazinesTurret = _vehicle magazinesTurret _turret;
-
     private _magazines = [];
     {
         private _curMagazine = _x;
         ([_hash, _curMagazine] call CBA_fnc_hashGet) params ["_amount"];
-    
-        _amount = _amount - ({_x == _curMagazine} count _curMagazinesTurret);
 
         _magazines pushBack [_curMagazine, _amount];
         nil;
