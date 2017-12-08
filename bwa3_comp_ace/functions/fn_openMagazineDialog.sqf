@@ -6,8 +6,8 @@ If ((!alive _vehicle) || {!(createDialog "BWA3_MagazineDialog")}) exitWith {};
 
 disableSerialization;
 
-private _dialog = findDisplay IDD_BWA3_comp_ace_magazineDialog;
-private _ctrlTable = _dialog displayCtrl IDC_BWA3_comp_ace_magazineDialog_CONTROLSTABLE;
+private _dialog = findDisplay IDD_BWA3_MAGAZINEDIALOG;
+private _ctrlTable = _dialog displayCtrl IDC_BWA3_MAGAZINEDIALOG_CONTROLSTABLE;
 
 _dialog setVariable ["BWA3_comp_ace_magazineDialog_vehicle", _vehicle];
 _dialog setVariable ["BWA3_comp_ace_magazineDialog_turret", _turret];
@@ -59,7 +59,7 @@ private _curMagazinesTurret = _vehicle magazinesTurret _turret;
 [_hash, _curMagazine, [_value, _ctrlSlider, _ctrlEdit]] call CBA_fnc_hashSet
 
 #define GET_VALUES private _curMagazine = _ctrl getVariable "BWA3_comp_ace_magazineDialog_magazineClass"; \
-private _hash = _ctrl getVariable "BWA3_comp_ace_magazineDialog_hash"; \
+private _hash = (ctrlParent _ctrl) getVariable "BWA3_comp_ace_magazineDialog_hash"; \
 ([_hash, _curMagazine] call CBA_fnc_hashGet) params ["_curAmount", "_ctrlSlider", "_ctrlEdit"]
 
 
