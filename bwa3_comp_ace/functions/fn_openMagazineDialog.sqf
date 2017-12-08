@@ -125,14 +125,21 @@ _dialog displayAddEventHandler ["Unload", {
             for "_i" from 1 to _amount do {
                 _vehicle addMagazineTurret [_ammo, _turret];
             };
+            nil
         } count ([_hash] call CBA_fnc_hashKeys);
     };
+
+    private _curMagazinesTurret = _vehicle magazinesTurret _turret;
 
     private _magazines = [];
     {
         private _curMagazine = _x;
         ([_hash, _curMagazine] call CBA_fnc_hashGet) params ["_amount"];
+    
+        _amount = _amount - ({_x == _curMagazine} count _curMagazinesTurret);
+
         _magazines pushBack [_curMagazine, _amount];
+        nil;
     } count ([_hash] call CBA_fnc_hashKeys);
 
     [_vehicle, _turret, _magazines] call BWA3_fnc_loadMagazines;
