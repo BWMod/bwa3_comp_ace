@@ -1,9 +1,15 @@
-#include "\a3\ui_f\hpp\defineCommon.inc"
-#include "\a3\ui_f\hpp\defineResincl.inc"
+/*
+    copied macros from: "\a3\ui_f\hpp\defineCommon.inc"
+*/
+#define GUI_GRID_WAbs			((safezoneW / safezoneH) min 1.2)
+#define GUI_GRID_HAbs			(GUI_GRID_WAbs / 1.2)
+#define GUI_GRID_W			(GUI_GRID_WAbs / 40)
+#define GUI_GRID_H			(GUI_GRID_HAbs / 25)
+#define GUI_GRID_CENTER_X		(safezoneX + (safezoneW - GUI_GRID_CENTER_WAbs)/2)
+#define GUI_GRID_CENTER_Y		(safezoneY + (safezoneH - GUI_GRID_CENTER_HAbs)/2)
 
 /*extern*/ class RscText;
 /*extern*/ class RscButtonMenu;
-
 
 class BWA3_MagazineDialog {
     idd = IDD_BWA3_MAGAZINEDIALOG;
@@ -18,7 +24,7 @@ class BWA3_MagazineDialog {
             y = GUI_GRID_CENTER_Y;
             w = GUI_GRID_W * 24;
             h = GUI_GRID_H;
-            sizeEx = GUI_TEXT_SIZE_MEDIUM;
+            sizeEx = GUI_GRID_H;
             colorBackground[] = {"(profileNamespace getVariable ['GUI_BCG_RGB_R', 0.13])","(profileNamespace getVariable ['GUI_BCG_RGB_G', 0.54])","(profileNamespace getVariable ['GUI_BCG_RGB_B', 0.21])",1};
         };
         class BackgroundDialog: RscText {
@@ -31,8 +37,7 @@ class BWA3_MagazineDialog {
             text = "";
         };
         class ButtonApply: RscButtonMenu {
-            idc = IDC_OK;
-            //action = QUOTE(call FUNC(onButtonApply));
+            idc = 1;
             text = "$STR_ui_debug_but_apply";
             x = GUI_GRID_CENTER_X + GUI_GRID_W * 24;
             y = GUI_GRID_CENTER_Y + GUI_GRID_H * 16;
@@ -40,9 +45,8 @@ class BWA3_MagazineDialog {
             h = GUI_GRID_H;
         };
         class ButtonClose: ButtonApply {
-            idc = IDC_CANCEL;
+            idc = 2;
             text = "$STR_disp_cancel";
-            //action = QUOTE(call FUNC(onButtonClose));
             x = GUI_GRID_CENTER_X + GUI_GRID_W * 16;
         };
         class ControlsTable {
@@ -52,8 +56,8 @@ class BWA3_MagazineDialog {
             w = GUI_GRID_W * 22;
             h = GUI_GRID_H * 13;
 
-            type = CT_CONTROLS_TABLE;
-            style = SL_TEXTURES;
+            type = 19;
+            style = 0x10;
 
             lineSpacing = 0.1 * GUI_GRID_H;
             rowHeight = 1.1 * GUI_GRID_H;
@@ -73,11 +77,9 @@ class BWA3_MagazineDialog {
                 autoScrollRewind = 1;
                 autoScrollSpeed = 1;
             };
-
             class HScrollBar: ScrollBar {
                 height = 0;
             };
-
             class HeaderTemplate {
                 class HeaderBackground {
                     controlBaseClassPath[] = {"RscText"};
@@ -92,7 +94,6 @@ class BWA3_MagazineDialog {
                     controlOffsetY = 0;
                 };
             };
-
             class RowTemplate {
                 class RowBackground {
                     controlBaseClassPath[] = {"RscText"};
@@ -121,7 +122,6 @@ class BWA3_MagazineDialog {
                     controlH = 1 * GUI_GRID_H;
                 };
             };
-
         };
     };
 };
