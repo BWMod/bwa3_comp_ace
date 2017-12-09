@@ -29,13 +29,17 @@
             <English>Magazine dialog allowed</English>
             <German>Munitionsauswahl erlaubt</German>
         </Key>
-        <Key ID="STR_BWA3_Comp_Ace_loadingMagazines">
-            <English>Rearming...</English>
-            <German>Aufmunitionieren...</German>
+        <Key ID="STR_BWA3_Comp_Ace_addMagazine">
+            <English>Loading %1...</English>
+            <German>Lade %1...</German>
+        </Key>
+        <Key ID="STR_BWA3_Comp_Ace_removeMagazine">
+            <English>Removing %1...</English>
+            <German>Entlade %1...</German>
         </Key>
         <Key ID="STR_BWA3_Comp_Ace_loadingStopped">
-            <English>Loading Magazine stopped</English>
-            <German>Magazine verladen abgebrochen</German>
+            <English>Rearming stopped</English>
+            <German>Aufmunitionieren abgebrochen</German>
         </Key>
     </Package>
 </Project>

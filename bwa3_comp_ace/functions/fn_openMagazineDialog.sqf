@@ -27,7 +27,7 @@ _dialog setVariable ["BWA3_comp_ace_magazineDialog_hash", _hash];
 private _MaxMagazineAmount = _vehicle getVariable ["BWA3_maxMagazineLoad", count (getArray((_this call CBA_fnc_getTurret) >> "magazines"))];
 _dialog setVariable ["BWA3_comp_ace_magazineDialog_MaxMagazineAmount", _MaxMagazineAmount];
 private _Weapons = _vehicle weaponsTurret _turret;
-private _curMagazinesTurret = ((magazinesAllTurrets _vehicle) select {((_x select 1) isEqualTo _turret) && ((_x select 2) > 0)});
+private _curMagazinesTurret = (((magazinesAllTurrets _vehicle) select {((_x select 1) isEqualTo _turret) && ((_x select 2) > 0)})) apply {_x select 0};
 
 {
     private _possibleMagazines = getArray(configFile >> "CfgWeapons" >> _x >> "magazines");
@@ -61,8 +61,6 @@ private _curMagazinesTurret = ((magazinesAllTurrets _vehicle) select {((_x selec
 #define GET_VALUES private _curMagazine = _ctrl getVariable "BWA3_comp_ace_magazineDialog_magazineClass"; \
 private _hash = (ctrlParent _ctrl) getVariable "BWA3_comp_ace_magazineDialog_hash"; \
 ([_hash, _curMagazine] call CBA_fnc_hashGet) params ["_curAmount", "_ctrlSlider", "_ctrlEdit"]
-
-
 
 {
     private _curMagazine = _x;
@@ -119,9 +117,16 @@ _dialog displayAddEventHandler ["Unload", {
         private _curMagazine = _x;
         ([_hash, _curMagazine] call CBA_fnc_hashGet) params ["_amount"];
 
-        _magazines pushBack [_curMagazine, _amount];
+        // make sure to remove magazines before adding magazines
+        private _curAmount = {(_x select 0) isEqualTo _curMagazine} count ((magazinesAllTurrets _vehicle) select {((_x select 1) isEqualTo _turret) && ((_x select 2) > 0)});
+        If (_curAmount < _amount) then {
+            _magazines pushBack [_curMagazine, _amount];
+        };
+        If (_curAmount > _amount) then {
+            _magazines = [[_curMagazine, _amount]] + _magazines;
+        };
         nil;
     } count ([_hash] call CBA_fnc_hashKeys);
 
-    [_vehicle, _turret, _magazines] call BWA3_fnc_loadMagazines;
+    [BWA3_fnc_loadMagazines, [_vehicle, _turret, _magazines]] call CBA_fnc_execNextFrame;
 }];
