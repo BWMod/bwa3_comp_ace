@@ -8,6 +8,19 @@ class CfgMagazines {
         ACE_isBelt = 1;
     };
 
+    class 60Rnd_30mm_APFSDS_shells;
+    class BWA3_240Rnd_APFSDS_shells: 60Rnd_30mm_APFSDS_shells {
+        BWA3_MagazineRearmTime = 30;
+    };
+    class 140Rnd_30mm_MP_shells;
+    class BWA3_160Rnd_HE_shells: 140Rnd_30mm_MP_shells {
+        BWA3_MagazineRearmTime = 30;
+    };
+
+    class BWA3_160Rnd_ABM_shells: BWA3_160Rnd_HE_shells {
+        BWA3_MagazineRearmTime = 30;
+    };
+
     class BWA3_DM31AT_Mag: CA_Magazine {
     	ACE_explosives_Placeable = 1;
         useAction = 0;
