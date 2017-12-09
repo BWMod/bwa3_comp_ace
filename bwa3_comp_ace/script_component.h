@@ -1,4 +1,4 @@
-#include "\bwa3_common\script_component.h"
+#include "script_macros.h"
 
 #define ADDON BWA3_Comp_ACE
 
