@@ -1,12 +1,12 @@
 /*
     copied macros from: "\a3\ui_f\hpp\defineCommon.inc"
 */
-#define GUI_GRID_WAbs			((safezoneW / safezoneH) min 1.2)
-#define GUI_GRID_HAbs			(GUI_GRID_WAbs / 1.2)
-#define GUI_GRID_W			(GUI_GRID_WAbs / 40)
-#define GUI_GRID_H			(GUI_GRID_HAbs / 25)
-#define GUI_GRID_CENTER_X		(safezoneX + (safezoneW - GUI_GRID_CENTER_WAbs)/2)
-#define GUI_GRID_CENTER_Y		(safezoneY + (safezoneH - GUI_GRID_CENTER_HAbs)/2)
+#define GUI_GRID_WAbs ((safezoneW / safezoneH) min 1.2)
+#define GUI_GRID_HAbs (GUI_GRID_WAbs / 1.2)
+#define GUI_GRID_W (GUI_GRID_WAbs / 40)
+#define GUI_GRID_H (GUI_GRID_HAbs / 25)
+#define GUI_GRID_CENTER_X (safezoneX + (safezoneW - GUI_GRID_WAbs)/2)
+#define GUI_GRID_CENTER_Y (safezoneY + (safezoneH - GUI_GRID_HAbs)/2)
 
 /*extern*/ class RscText;
 /*extern*/ class RscButtonMenu;
